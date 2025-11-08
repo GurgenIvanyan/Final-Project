@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xzFOJioHsnE=",
+  "dgSpecHash": "hfjQgZpuzvI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gurgen\\source\\repos\\UserService\\UserService.csproj",
+  "projectFilePath": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\UserService\\UserService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gurgen\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\Gurgen\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.3.0\\microsoft.aspnetcore.authentication.core.2.3.0.nupkg.sha512",

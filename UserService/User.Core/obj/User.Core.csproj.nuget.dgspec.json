@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gurgen\\source\\repos\\User.Core\\User.Core.csproj": {}
+    "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Core\\User.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gurgen\\source\\repos\\User.Core\\User.Core.csproj": {
+    "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Core\\User.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gurgen\\source\\repos\\User.Core\\User.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Core\\User.Core.csproj",
         "projectName": "User.Core",
-        "projectPath": "C:\\Users\\Gurgen\\source\\repos\\User.Core\\User.Core.csproj",
+        "projectPath": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Core\\User.Core.csproj",
         "packagesPath": "C:\\Users\\Gurgen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gurgen\\source\\repos\\User.Core\\obj\\",
+        "outputPath": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

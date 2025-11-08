@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Application.Common.Errors;
 using User.Application.Abstractions.Http;
+using User.Application.Common.Errors;
 using User.Application.DTOs;
 using User.Application.Services.IServices;
 using User.Core.Entities;

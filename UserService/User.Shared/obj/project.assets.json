@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gurgen\\source\\repos\\User.Shared\\User.Shared.csproj",
+      "projectUniqueName": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Shared\\User.Shared.csproj",
       "projectName": "User.Shared",
-      "projectPath": "C:\\Users\\Gurgen\\source\\repos\\User.Shared\\User.Shared.csproj",
+      "projectPath": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Shared\\User.Shared.csproj",
       "packagesPath": "C:\\Users\\Gurgen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gurgen\\source\\repos\\User.Shared\\obj\\",
+      "outputPath": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

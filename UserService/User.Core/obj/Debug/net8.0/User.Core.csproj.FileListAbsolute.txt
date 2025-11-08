@@ -9,3 +9,15 @@ C:\Users\Gurgen\source\repos\User.Core\obj\Debug\net8.0\User.Core.dll
 C:\Users\Gurgen\source\repos\User.Core\obj\Debug\net8.0\refint\User.Core.dll
 C:\Users\Gurgen\source\repos\User.Core\obj\Debug\net8.0\User.Core.pdb
 C:\Users\Gurgen\source\repos\User.Core\obj\Debug\net8.0\ref\User.Core.dll
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Core\bin\Debug\net8.0\User.Core.deps.json
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Core\bin\Debug\net8.0\User.Core.dll
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Core\bin\Debug\net8.0\User.Core.pdb
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Core\obj\Debug\net8.0\User.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Core\obj\Debug\net8.0\User.Core.AssemblyInfoInputs.cache
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Core\obj\Debug\net8.0\User.Core.AssemblyInfo.cs
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Core\obj\Debug\net8.0\User.Core.csproj.CoreCompileInputs.cache
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Core\obj\Debug\net8.0\User.Core.sourcelink.json
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Core\obj\Debug\net8.0\User.Core.dll
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Core\obj\Debug\net8.0\refint\User.Core.dll
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Core\obj\Debug\net8.0\User.Core.pdb
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Core\obj\Debug\net8.0\ref\User.Core.dll

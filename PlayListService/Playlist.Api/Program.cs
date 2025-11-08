@@ -14,7 +14,6 @@ using Playlist.Api.Infrastructure.Persistence.Repositories;
 using Playlist.Api.Infrastructure.Security;
 using Playlist.Api.Web.Middleware;
 
-
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,7 +30,7 @@ builder.Services.AddStackExchangeRedisCache(o =>
 });
 builder.Services.AddSingleton<RedisCacheService>();
 
-// Repos
+// Repositories
 builder.Services.AddScoped<IArtistRepository, ArtistRepository>();
 builder.Services.AddScoped<ISongRepository, SongRepository>();
 builder.Services.AddScoped<IPlaylistRepository, PlaylistRepository>();
@@ -107,6 +106,13 @@ builder.Services.AddCors(opt =>
 });
 
 var app = builder.Build();
+
+// === Apply EF Core migrations on startup ===
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
+}
 
 // Pipeline
 app.UseMiddleware<ExceptionHandlingMiddleware>();

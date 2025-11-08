@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using System.Text.Json;
-using Application.Common.Errors;
+
+using User.Application.Common.Errors;
 
 namespace User.Infrastructure.Http;
 

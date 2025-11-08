@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jREa+JK4kx0=",
+  "dgSpecHash": "Y5wXT3vM10c=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gurgen\\source\\repos\\Web\\Web.csproj",
+  "projectFilePath": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gurgen\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Gurgen\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

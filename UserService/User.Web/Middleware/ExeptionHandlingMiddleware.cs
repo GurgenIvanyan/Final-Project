@@ -1,8 +1,9 @@
 ﻿using System.Net;
 using System.Text.Json;
-using Application.Common.Errors; // AppErrors + наши DomainException-типы
+using User.Application.Common.Errors; // AppErrors + наши DomainException-типы
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using Application.Common.Errors;
 
 namespace User.Web.Middleware;
 

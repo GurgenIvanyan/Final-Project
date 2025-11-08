@@ -9,3 +9,15 @@ C:\Users\Gurgen\source\repos\User.Shared\obj\Debug\net8.0\User.Shared.dll
 C:\Users\Gurgen\source\repos\User.Shared\obj\Debug\net8.0\refint\User.Shared.dll
 C:\Users\Gurgen\source\repos\User.Shared\obj\Debug\net8.0\User.Shared.pdb
 C:\Users\Gurgen\source\repos\User.Shared\obj\Debug\net8.0\ref\User.Shared.dll
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Shared\bin\Debug\net8.0\User.Shared.deps.json
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Shared\bin\Debug\net8.0\User.Shared.dll
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Shared\bin\Debug\net8.0\User.Shared.pdb
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Shared\obj\Debug\net8.0\User.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Shared\obj\Debug\net8.0\User.Shared.AssemblyInfoInputs.cache
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Shared\obj\Debug\net8.0\User.Shared.AssemblyInfo.cs
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Shared\obj\Debug\net8.0\User.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Shared\obj\Debug\net8.0\User.Shared.sourcelink.json
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Shared\obj\Debug\net8.0\User.Shared.dll
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Shared\obj\Debug\net8.0\refint\User.Shared.dll
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Shared\obj\Debug\net8.0\User.Shared.pdb
+C:\Users\Gurgen\source\repos\Final-Project\UserService\User.Shared\obj\Debug\net8.0\ref\User.Shared.dll

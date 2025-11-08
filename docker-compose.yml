@@ -1,0 +1,56 @@
+services:
+  playlist_api:
+    build:
+      context: ./PlayListService          # ⟵ РОДИТЕЛЬ папки Playlist.Api
+      dockerfile: ./Playlist.Api/Dockerfile
+    image: playlist-api:latest
+    container_name: playlist-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Production"
+      ConnectionStrings__Postgres: "Host=postgres;Port=5432;Database=Playlist.Api;Username=postgres;Password=postgres"
+      Redis__Connection: "redis:6379"
+      Jwt__Issuer: "playlist-api"
+      Jwt__Audience: "playlist-clients"
+      Jwt__SigningKey: "CHANGE_ME_VERY_LONG_SECRET_KEY_32+_BYTES_MINIMUM!!"
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - "8080:8080"
+
+  user_service:
+    build:
+      context: ./UserService              # ⟵ РОДИТЕЛЬ папки UserService (entry-проект)
+      dockerfile: ./UserService/Dockerfile
+    image: user-service:latest
+    container_name: user-service
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Production"
+      ConnectionStrings__Postgres: "Host=postgres;Port=5432;Database=UserService;Username=postgres;Password=postgres"
+      Jwt__Issuer: "user-service"
+      Jwt__Audience: "user-clients"
+      Jwt__SigningKey: "CHANGE_ME_VERY_LONG_SECRET_KEY_32+_BYTES_MINIMUM!!"
+      PlaylistService__BaseUrl: "http://playlist-api:8080"
+    depends_on:
+      - postgres
+    ports:
+      - "8081:8081"
+
+  postgres:
+    image: postgres:16
+    container_name: pg
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  pgdata:

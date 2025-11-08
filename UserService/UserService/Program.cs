@@ -10,9 +10,9 @@ using User.Application.Services.IServices;
 using User.Core.Interfaces.Repositories;
 using User.Infrastructure.Http;                 // ForwardAuthHeaderHandler, PlaylistGateway, ProblemDetailsHandler
 using User.Infrastructure.Persistence;
+using User.Infrastructure.Persistence.Repositories;
 using User.Infrastructure.Security;
 using User.Web.Middleware;
-using User.Infrastructure.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 var cfg = builder.Configuration;
@@ -96,6 +96,13 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
+// === Apply EF Core migrations on startup ===
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
+}
+
 // Pipeline
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
@@ -105,7 +112,6 @@ app.UseSwaggerUI(c =>
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "User Service v1");
     c.RoutePrefix = "";
 });
-app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseAuthentication();
 app.UseAuthorization();
