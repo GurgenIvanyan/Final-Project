@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\UserService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BE0E6477-9077-4131-83FC-495F14A60532}|UserService.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\userservice\\userservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE0E6477-9077-4131-83FC-495F14A60532}|UserService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE0E6477-9077-4131-83FC-495F14A60532}|UserService.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\userservice\\userservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BE0E6477-9077-4131-83FC-495F14A60532}|UserService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A6BA94DE-33AA-403B-9E24-B1BE6582F89D}|..\\User.Application\\User.Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\userservice\\user.application\\services\\userplaylistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -31,14 +39,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BE0E6477-9077-4131-83FC-495F14A60532}|UserService.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\userservice\\userservice\\userservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{BE0E6477-9077-4131-83FC-495F14A60532}|UserService.csproj|solutionrelative:userservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE0E6477-9077-4131-83FC-495F14A60532}|UserService.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\userservice\\userservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE0E6477-9077-4131-83FC-495F14A60532}|UserService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE0E6477-9077-4131-83FC-495F14A60532}|UserService.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\userservice\\userservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BE0E6477-9077-4131-83FC-495F14A60532}|UserService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE0E6477-9077-4131-83FC-495F14A60532}|UserService.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\userservice\\userservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -241,50 +241,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UserPlaylistService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Application\\Services\\UserPlaylistService.cs",
               "RelativeDocumentMoniker": "..\\User.Application\\Services\\UserPlaylistService.cs",
               "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Application\\Services\\UserPlaylistService.cs",
               "RelativeToolTip": "..\\User.Application\\Services\\UserPlaylistService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-08T17:12:16.871Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ExeptionHandlingMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Web\\Middleware\\ExeptionHandlingMiddleware.cs",
-              "RelativeDocumentMoniker": "..\\User.Web\\Middleware\\ExeptionHandlingMiddleware.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Web\\Middleware\\ExeptionHandlingMiddleware.cs",
-              "RelativeToolTip": "..\\User.Web\\Middleware\\ExeptionHandlingMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T17:11:47.592Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProblemDetailsHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Infrastructure\\Http\\ProblemDetailsHandler.cs",
-              "RelativeDocumentMoniker": "..\\User.Infrastructure\\Http\\ProblemDetailsHandler.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Infrastructure\\Http\\ProblemDetailsHandler.cs",
-              "RelativeToolTip": "..\\User.Infrastructure\\Http\\ProblemDetailsHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T17:11:07.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "DomainsExeption.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Application\\Common\\Errors\\DomainsExeption.cs",
               "RelativeDocumentMoniker": "..\\User.Application\\Common\\Errors\\DomainsExeption.cs",
@@ -292,12 +266,11 @@
               "RelativeToolTip": "..\\User.Application\\Common\\Errors\\DomainsExeption.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T17:10:22.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-08T17:10:22.578Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AppErrors.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Application\\Common\\Errors\\AppErrors.cs",
               "RelativeDocumentMoniker": "..\\User.Application\\Common\\Errors\\AppErrors.cs",
@@ -305,12 +278,11 @@
               "RelativeToolTip": "..\\User.Application\\Common\\Errors\\AppErrors.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T17:09:51.043Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-08T17:09:51.043Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\UserService\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
@@ -318,8 +290,7 @@
               "RelativeToolTip": "Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-08T16:58:36.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-08T16:58:36.264Z"
             },
             {
               "$type": "Document",
@@ -347,7 +318,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\UserService\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\UserService\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-04T20:46:32.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\UserService\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\UserService\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAGAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T20:23:03.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProblemDetailsHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Infrastructure\\Http\\ProblemDetailsHandler.cs",
+              "RelativeDocumentMoniker": "..\\User.Infrastructure\\Http\\ProblemDetailsHandler.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Infrastructure\\Http\\ProblemDetailsHandler.cs",
+              "RelativeToolTip": "..\\User.Infrastructure\\Http\\ProblemDetailsHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T17:11:07.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ExeptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Web\\Middleware\\ExeptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "..\\User.Web\\Middleware\\ExeptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Web\\Middleware\\ExeptionHandlingMiddleware.cs",
+              "RelativeToolTip": "..\\User.Web\\Middleware\\ExeptionHandlingMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T17:11:47.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "UserService.csproj",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\UserService\\UserService.csproj",
               "RelativeDocumentMoniker": "UserService.csproj",
@@ -355,12 +376,11 @@
               "RelativeToolTip": "UserService.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-08T13:13:18.625Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-08T13:13:18.625Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "UserService.csproj.Backup.tmp",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\UserService\\UserService.csproj.Backup.tmp",
               "RelativeDocumentMoniker": "UserService.csproj.Backup.tmp",
@@ -368,8 +388,7 @@
               "RelativeToolTip": "UserService.csproj.Backup.tmp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-08T12:48:11.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-08T12:48:11.351Z"
             },
             {
               "$type": "Document",
@@ -385,16 +404,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.Application",
+              "DocumentIndex": 6,
+              "Title": "User.Application.csproj",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Application\\User.Application.csproj",
               "RelativeDocumentMoniker": "..\\User.Application\\User.Application.csproj",
               "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\User.Application\\User.Application.csproj",
               "RelativeToolTip": "..\\User.Application\\User.Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-08T16:10:06.562Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-08T16:10:06.562Z"
             },
             {
               "$type": "Document",
@@ -419,19 +437,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-04T20:24:43.677Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\UserService\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\UserService\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T20:23:03.635Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1092,18 +1097,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-05T13:29:10.892Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\UserService\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\UserService\\UserService\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-04T20:46:32.048Z"
             },
             {
               "$type": "Document",

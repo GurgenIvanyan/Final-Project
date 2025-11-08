@@ -97,11 +97,11 @@ builder.Services.AddSwaggerGen(c =>
 var app = builder.Build();
 
 // === Apply EF Core migrations on startup ===
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.Migrate();
-}
+//using (var scope = app.Services.CreateScope())
+//{
+//    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+//    db.Database.Migrate();
+//}
 
 // Pipeline
 app.UseMiddleware<ExceptionHandlingMiddleware>();

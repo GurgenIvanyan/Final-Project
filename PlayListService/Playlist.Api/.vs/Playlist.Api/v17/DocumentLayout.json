@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\playlist.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\playlist.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\common\\errors\\domainsexeption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -14,16 +22,8 @@
       "RelativeMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|solutionrelative:.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\playlist.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\playlist.api\\playlist.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|solutionrelative:playlist.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\playlist.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\songservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -292,36 +292,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DomainsExeption.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Common\\Errors\\DomainsExeption.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Common\\Errors\\DomainsExeption.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Common\\Errors\\DomainsExeption.cs",
-              "RelativeToolTip": "..\\Application\\Common\\Errors\\DomainsExeption.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T16:09:22.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Application.csproj",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Application.csproj",
-              "RelativeDocumentMoniker": "..\\..\\..\\Application\\Application.csproj",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Application\\Application.csproj",
-              "RelativeToolTip": "..\\..\\..\\Application\\Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-03T18:26:11.071Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Playlist.Api.csproj",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Playlist.Api.csproj",
               "RelativeDocumentMoniker": "Playlist.Api.csproj",
@@ -369,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": ".dockerignore",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\.dockerignore",
               "RelativeDocumentMoniker": ".dockerignore",
@@ -377,12 +352,11 @@
               "RelativeToolTip": ".dockerignore",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-08T15:36:01.742Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-08T15:36:01.742Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
@@ -390,8 +364,58 @@
               "RelativeToolTip": "Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-08T15:33:32.44Z",
+              "WhenOpened": "2025-11-08T15:33:32.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-03T17:26:29.384Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAvwHEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T16:01:18.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DomainsExeption.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Common\\Errors\\DomainsExeption.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Common\\Errors\\DomainsExeption.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Common\\Errors\\DomainsExeption.cs",
+              "RelativeToolTip": "..\\Application\\Common\\Errors\\DomainsExeption.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T16:09:22.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Application.csproj",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Application.csproj",
+              "RelativeDocumentMoniker": "..\\..\\..\\Application\\Application.csproj",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Application\\Application.csproj",
+              "RelativeToolTip": "..\\..\\..\\Application\\Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-03T18:26:11.071Z"
             },
             {
               "$type": "Document",
@@ -404,31 +428,6 @@
               "ViewState": "AgIAAH4AAAAAAAAAAAA8wIkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-08T15:07:27.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T16:01:18.206Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-03T17:26:29.384Z"
             },
             {
               "$type": "Document",
