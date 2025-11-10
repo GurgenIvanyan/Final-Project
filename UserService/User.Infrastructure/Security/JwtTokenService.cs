@@ -3,16 +3,16 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
-using User.Application.Abstractions.Security;   // <-- важно
+using User.Application.Abstractions.Security;  
 
 namespace User.Infrastructure.Security
 {
-    public class JwtTokenService : IJwtTokenService   // <-- реализуем интерфейс
+    public class JwtTokenService : IJwtTokenService   
     {
         private readonly JwtOptions _opt;
         public JwtTokenService(JwtOptions opt) => _opt = opt;
 
-        public string Create(int userId, string userName, string role) // <-- сигнатура как в интерфейсе
+        public string Create(int userId, string userName, string role)
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_opt.SigningKey));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

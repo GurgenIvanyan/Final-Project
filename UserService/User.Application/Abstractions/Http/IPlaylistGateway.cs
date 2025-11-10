@@ -16,7 +16,7 @@ namespace User.Application.Abstractions.Http
         Task<int> UnlikeSongAsync(int songId, int userId, CancellationToken ct = default);
         Task<int> GetSongLikesAsync(int songId, CancellationToken ct = default);
 
-        // batch titles
+        
         Task<Dictionary<int, string>> GetSongTitlesByIdsAsync(IEnumerable<int> ids, CancellationToken ct = default);
         Task<PagedResult<ExternalPlaylistListItemDto>> GetExternalPlaylistsAsync(
        string? genre, int page, int pageSize, CancellationToken ct = default);

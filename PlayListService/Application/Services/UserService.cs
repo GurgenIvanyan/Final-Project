@@ -1,11 +1,9 @@
-﻿// Application/Services/UserService.cs
+﻿
 using Application.DTOs;
 using Application.Services.IServices;
 using Playlist.Api.Core.Entities;
 using Playlist.Api.Core.Interfaces.Repositories;
 using Playlist.Api.Infrastructure.Security;
-
-// 👇 алиас, чтобы отличать доменную сущность от корневого namespace "User"
 using CoreUser = Playlist.Api.Core.Entities.User;
 
 namespace Playlist.Api.Application.Services;
@@ -26,6 +24,7 @@ public class UserService : IUserService
 
     public async Task<UserDto> RegisterAsync(RegisterRequestDto dto, CancellationToken ct = default)
     {
+       
         if (string.IsNullOrWhiteSpace(dto.UserName))
             throw new ArgumentException("UserName is required.", nameof(dto.UserName));
         if (string.IsNullOrWhiteSpace(dto.Password))
@@ -35,7 +34,7 @@ public class UserService : IUserService
 
         if (await _users.ExistsByUserNameAsync(userName, ct))
             throw new InvalidOperationException("UserName already exists.");
-
+        
         var entity = new CoreUser
         {
             UserName = userName,

@@ -2,7 +2,6 @@
 using User.Core.Interfaces.Repositories;
 using User.Infrastructure.Persistence;
 using User.Infrastructure.Persistence.Repositories;
-using User.Infrastructure.Persistence;
 using UserEntity = User.Core.Entities.User;
 
 namespace User.Infrastructure.Persistence.Repositories 

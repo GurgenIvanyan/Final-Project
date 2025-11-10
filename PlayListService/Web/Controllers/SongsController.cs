@@ -54,8 +54,7 @@ namespace Playlist.Api.Web.Controllers
             CancellationToken ct = default)
             => _songSvc.SearchAsync(title, genre, page, pageSize, ct);
 
-        // NEW: batch titles
-        // GET /songs/by-ids?ids=1,2,3
+       
         [HttpGet("by-ids")]
         [AllowAnonymous]
         [ProducesResponseType(typeof(List<SlimSongDto>), StatusCodes.Status200OK)]
@@ -74,7 +73,7 @@ namespace Playlist.Api.Web.Controllers
             return Ok(res.ToList());
         }
 
-        // GET /songs/top-liked
+       
         [HttpGet("top-liked")]
         [AllowAnonymous]
         [ProducesResponseType(typeof(PagedResult<SongWithLikesDto>), StatusCodes.Status200OK)]
@@ -101,7 +100,7 @@ namespace Playlist.Api.Web.Controllers
 
             if (parsed.Length == 0) return Ok(new List<SongMetaDto>());
 
-            var res = await _songSvc.GetMetadataByIdsAsync(parsed, ct); // <-- FIX: _songSvc
+            var res = await _songSvc.GetMetadataByIdsAsync(parsed, ct);
             return Ok(res.ToList());
         }
     }

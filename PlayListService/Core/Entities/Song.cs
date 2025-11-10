@@ -13,7 +13,7 @@ public class Song
     public Artist Artist { get; set; } = default!;
     public SongMetadata Metadata { get; set; } = default!; // 1:1
 
-    // Core/Entities/Song.cs
+  
     public ICollection<SongLike> SongLikes { get; set; } = new List<SongLike>();
 
     public ICollection<PlaylistSong> PlaylistSongs { get; set; } = new List<PlaylistSong>();

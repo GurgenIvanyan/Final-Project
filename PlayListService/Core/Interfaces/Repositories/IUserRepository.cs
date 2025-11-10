@@ -1,4 +1,4 @@
-﻿// Core/Interfaces/Repositories/IUserRepository.cs
+﻿
 using Playlist.Api.Core.Entities;
 
 namespace Playlist.Api.Core.Interfaces.Repositories;

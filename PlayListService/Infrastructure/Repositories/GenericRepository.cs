@@ -1,4 +1,4 @@
-﻿// Infrastructure/Persistence/Repositories/GenericRepository.cs
+﻿
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using Playlist.Api.Core.Interfaces.Repositories;

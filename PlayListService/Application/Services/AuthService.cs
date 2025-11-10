@@ -1,4 +1,4 @@
-﻿// Application/Services/AuthService.cs
+﻿
 using Application.DTOs;
 using Application.Services.IServices;
 using Playlist.Api.Core.Interfaces.Repositories;
@@ -19,7 +19,8 @@ public class AuthService : IAuthService
 
     public async Task<AuthTokenDto> LoginAsync(LoginRequestDto dto, CancellationToken ct = default)
     {
-        var user = await _users.GetByUserNameAsync(dto.UserName, ct);
+       
+         var user = await _users.GetByUserNameAsync(dto.UserName, ct);
         if (user is null) throw new UnauthorizedAccessException("Invalid credentials.");
 
         var hashed = PasswordHasher.Hash(dto.Password);

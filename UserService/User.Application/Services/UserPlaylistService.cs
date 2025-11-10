@@ -22,7 +22,7 @@ namespace User.Application.Services
 
         public async Task<UserPlaylistDto> CreateAsync(int ownerUserId, UserPlaylistCreateDto dto, CancellationToken ct = default)
         {
-            // Field-level validation → красивый 422
+            
             if (string.IsNullOrWhiteSpace(dto.Name))
                 throw new ValidationException(AppErrors.ValidationFailed(), new Dictionary<string, string[]>
                 {
@@ -47,7 +47,7 @@ namespace User.Application.Services
 
         public async Task<UserPlaylistDto> ImportAsync(int ownerUserId, ImportPlaylistDto dto, CancellationToken ct = default)
         {
-            // внешняя проверка: красиво 404, если плейлист не найден в Playlist.Api
+            
             var src = await _gateway.GetPlaylistAsync(dto.SourcePlaylistId, ct)
                       ?? throw new NotFoundException(AppErrors.PlaylistNotFound(dto.SourcePlaylistId));
 
@@ -129,7 +129,7 @@ namespace User.Application.Services
                 foreach (var sid in songIds.Distinct())
                 {
                     var s = await _gateway.GetSongAsync(sid, ct);
-                    if (s is null) continue; // молча пропускаем неизвестные id
+                    if (s is null) continue; // ignore undefined ids
 
                     if (await _playlists.ContainsSongAsync(pl.Id, sid, ct)) continue;
 
@@ -178,7 +178,7 @@ namespace User.Application.Services
 
         public async Task<PagedResult<UserPlaylistDto>> GetMineAsync(int ownerUserId, int page, int pageSize, CancellationToken ct = default)
         {
-            // нормализуем пагинацию → если хочешь 422 — бросай ValidationException с errors
+           
             if (page < 1)
                 throw new ValidationException(AppErrors.ValidationFailed(), new Dictionary<string, string[]> { ["page"] = new[] { AppErrors.PageOutOfRange() } });
             if (pageSize <= 0)
@@ -193,10 +193,10 @@ namespace User.Application.Services
         {
             var pl = await _playlists.GetFullAsync(playlistId, ct);
             if (pl is null)
-                throw new NotFoundException(AppErrors.PlaylistNotFound(playlistId)); // красивый 404
+                throw new NotFoundException(AppErrors.PlaylistNotFound(playlistId)); 
 
             if (pl.OwnerUserId != requesterUserId && !pl.IsPublic)
-                throw new ForbiddenException(AppErrors.ForbiddenAction());           // красивый 403
+                throw new ForbiddenException(AppErrors.ForbiddenAction());           
 
             var refs = pl.Songs
                          .OrderBy(s => s.Order)
@@ -226,7 +226,7 @@ namespace User.Application.Services
 
             var (items, total) = await _playlists.GetPublicByOthersPagedAsync(requesterUserId, page, pageSize, ct);
 
-            // NEW — пустой список считаем логической «не найдено»
+            
             if (total == 0 || items.Count == 0)
                 throw new NotFoundException(AppErrors.NoPublicPlaylists());
 
@@ -252,7 +252,7 @@ namespace User.Application.Services
 
             var (items, total) = await _playlists.GetPublicByOthersPagedAsync(requesterUserId, page, pageSize, ct);
 
-            // NEW — тоже 404, но текст другой (для ясности)
+         
             if (total == 0 || items.Count == 0)
                 throw new NotFoundException(AppErrors.NoPublicPlaylistsWithSongs());
 
@@ -309,12 +309,11 @@ namespace User.Application.Services
                 throw new ValidationException(AppErrors.ValidationFailed(),
                     new Dictionary<string, string[]> { ["pageSize"] = new[] { AppErrors.PageSizeOutOfRange() } });
 
-            // 1) Берём публичные плейлисты других пользователей (лайт-список)
             var (items, total) = await _playlists.GetPublicByOthersPagedAsync(requesterUserId, page, pageSize, ct);
             if (total == 0 || items.Count == 0)
                 throw new NotFoundException(AppErrors.NoPublicPlaylistsWithSongs());
 
-            // 2) Для каждого плейлиста грузим полную версию, чтобы получить SongId + Order
+          
             var refsByPlaylist = new Dictionary<int, List<UserPlaylistSongRefDto>>();
             var allSongIds = new HashSet<int>();
 
@@ -332,7 +331,7 @@ namespace User.Application.Services
                 foreach (var r in refs) allSongIds.Add(r.SongId);
             }
 
-            // 3) Тянем расширенную мету пачкой из Playlist.Api
+            
             Dictionary<int, ExternalSongMetaDto> metaById;
             if (allSongIds.Count == 0)
             {
@@ -354,7 +353,6 @@ namespace User.Application.Services
                             Order: x.Order,
                             SongId: m.Id,
                             Title: m.Title,
-                            // У тебя ArtistName в DTO — not-nullable string, чтобы избежать варнингов:
                             ArtistName: m.ArtistName ?? "Unknown Artist",
                             Album: m.Album,
                             Year: m.Year,
@@ -362,7 +360,6 @@ namespace User.Application.Services
                         );
                     }
 
-                    // fallback если мета не вернулась
                     return new UserPlaylistSongRichItemDto(
                         Order: x.Order,
                         SongId: x.SongId,

@@ -1,4 +1,4 @@
-﻿// Infrastructure/Persistence/Repositories/SongRepository.cs
+﻿
 using Microsoft.EntityFrameworkCore;
 using Playlist.Api.Core.Entities;
 using Playlist.Api.Core.Interfaces.Repositories;
@@ -54,7 +54,7 @@ public class SongRepository : GenericRepository<Song>, ISongRepository
         var set = ids?.Distinct().ToArray() ?? Array.Empty<int>();
         return _db.Songs
             .Where(s => set.Contains(s.Id))
-            .Select(s => new Song { Id = s.Id, Title = s.Title }) // достаточно Id+Title
+            .Select(s => new Song { Id = s.Id, Title = s.Title }) 
             .ToListAsync(ct);
     }
 

@@ -1,4 +1,4 @@
-﻿// Web/Controllers/PlaylistsController.cs
+﻿
 using System.Security.Claims;
 using Application.Common;
 using Application.DTOs;
@@ -18,7 +18,7 @@ namespace Playlist.Api.Web.Controllers
 
         // ---------- Create ----------
         [HttpPost]
-        [Authorize] // must be authenticated to create
+        [Authorize] 
         [ProducesResponseType(typeof(PlaylistDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Create([FromBody] PlaylistCreateDto dto, CancellationToken ct)
@@ -28,8 +28,6 @@ namespace Playlist.Api.Web.Controllers
             return Ok(result);
         }
 
-        // ---------- List by genre (paged) ----------
-        // GET /playlists?genre=rock&page=1&pageSize=20
         [HttpGet]
         [AllowAnonymous]
         [ProducesResponseType(typeof(PagedResult<PlaylistListItemDto>), StatusCodes.Status200OK)]
@@ -40,7 +38,7 @@ namespace Playlist.Api.Web.Controllers
             CancellationToken ct = default)
             => _svc.GetByGenreAsync(genre, page, pageSize, ct);
 
-        // ---------- Details ----------
+ 
         [HttpGet("{id:int}")]
         [AllowAnonymous]
         [ProducesResponseType(typeof(PlaylistDetailsDto), StatusCodes.Status200OK)]
@@ -51,9 +49,7 @@ namespace Playlist.Api.Web.Controllers
             return dto is null ? NotFound() : Ok(dto);
         }
 
-        // ---------- Add one song (tail or at specific order) ----------
-        // POST /playlists/{id}/songs
-        // body: { "songId": 123, "order": 5 }  // order optional
+      
         [HttpPost("{id:int}/songs")]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -73,9 +69,7 @@ namespace Playlist.Api.Web.Controllers
             return NoContent();
         }
 
-        // ---------- Bulk add ----------
-        // POST /playlists/{id}/songs/bulk
-        // body: { "songIds": [1,2,3] }
+    
         [HttpPost("{id:int}/songs/bulk")]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -87,8 +81,7 @@ namespace Playlist.Api.Web.Controllers
             return NoContent();
         }
 
-        // ---------- Remove song ----------
-        // DELETE /playlists/{id}/songs/{songId}
+       
         [HttpDelete("{id:int}/songs/{songId:int}")]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -98,9 +91,7 @@ namespace Playlist.Api.Web.Controllers
             return NoContent();
         }
 
-        // ---------- Reorder ----------
-        // PATCH /playlists/{id}/songs/reorder
-        // body: { "songId": 123, "newOrder": 2 }
+       
         [HttpPatch("{id:int}/songs/reorder")]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -111,7 +102,7 @@ namespace Playlist.Api.Web.Controllers
         }
 
 
-        // -------- helper: extract user id from JWT (sub) --------
+       
         private bool TryGetUserId(out int userId)
         {
             var claim = User.FindFirst(ClaimTypes.NameIdentifier) ?? User.FindFirst("sub");

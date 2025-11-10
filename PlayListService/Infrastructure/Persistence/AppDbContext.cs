@@ -1,7 +1,7 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using Playlist.Api.Core.Entities;
-using Playlist.Api.Infrastructure.Security; // PasswordHasher
+using Playlist.Api.Infrastructure.Security; 
 using PlaylistEntity = Playlist.Api.Core.Entities.Playlist;
 
 namespace Playlist.Api.Infrastructure.Persistence
@@ -61,9 +61,7 @@ namespace Playlist.Api.Infrastructure.Persistence
                  .OnDelete(DeleteBehavior.Restrict);
             });
 
-            // ---------- SongMetadata (1:1) --------
-            // Your entity uses a separate PK (SongMetadataId) + FK (SongId).
-            // We keep it 1:1 by making SongId unique and FK to Song.
+            
             b.Entity<SongMetadata>(e =>
             {
                 e.ToTable("song_metadata");
@@ -78,7 +76,7 @@ namespace Playlist.Api.Infrastructure.Persistence
                  .HasForeignKey<SongMetadata>(m => m.SongId)
                  .OnDelete(DeleteBehavior.Cascade);
 
-                e.HasIndex(m => m.SongId).IsUnique(); // enforce 1:1
+                e.HasIndex(m => m.SongId).IsUnique(); 
             });
 
             // --------------- Playlist -------------
@@ -92,7 +90,7 @@ namespace Playlist.Api.Infrastructure.Persistence
                 e.Property(x => x.Genre).HasMaxLength(64);
                 e.Property(x => x.OwnerUserId).IsRequired();
 
-                e.HasIndex(x => new { x.Genre, x.Id }); // for genre paging
+                e.HasIndex(x => new { x.Genre, x.Id }); 
             });
 
             // -------- PlaylistSong (N:M + order) --
@@ -146,7 +144,7 @@ namespace Playlist.Api.Infrastructure.Persistence
                  .HasForeignKey(x => x.SongId)
                  .OnDelete(DeleteBehavior.Cascade);
 
-                e.HasIndex(x => new { x.SongId, x.UserId }).IsUnique(); // 1 пользователь — 1 лайк на песню
+                e.HasIndex(x => new { x.SongId, x.UserId }).IsUnique(); 
             });
 
             // -------- Seed admin user -------------

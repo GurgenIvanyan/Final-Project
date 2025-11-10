@@ -1,4 +1,4 @@
-﻿// User.Infrastructure/Security/CurrentUserService.cs
+﻿
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 

@@ -72,7 +72,7 @@ namespace Playlist.Api.Application.Services
                 await _playlists.AddAsync(entity, ct);
             }, ct);
 
-            // инвалидируем первую страницу списка по жанру (минимально необходимое)
+           
             await _cache.RemoveAsync(CacheKeyListPage(dto.Genre, 1, 20), ct);
 
             return _map.Map<PlaylistDto>(entity);

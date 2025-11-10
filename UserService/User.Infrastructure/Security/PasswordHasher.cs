@@ -1,10 +1,10 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
-using User.Application.Abstractions.Security;   // <-- важно
+using User.Application.Abstractions.Security;   
 
 namespace User.Infrastructure.Security
 {
-    public class PasswordHasher : IPasswordHasher   // <-- реализуем интерфейс
+    public class PasswordHasher : IPasswordHasher   
     {
         public string Hash(string input)
         {

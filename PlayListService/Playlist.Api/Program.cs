@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Playlist.Api.Application.Mapping;                // AutoMapper profile(s)
-using Playlist.Api.Application.Services;              // ArtistService, SongService, PlaylistService, AuthService, UserService, SongLikeService
+using Playlist.Api.Application.Mapping;               
+using Playlist.Api.Application.Services;              
 using Playlist.Api.Core.Interfaces.Repositories;
 using Playlist.Api.Infrastructure.Caching;
 using Playlist.Api.Infrastructure.Persistence;

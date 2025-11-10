@@ -11,7 +11,6 @@ namespace User.Core.Entities
         public int UserPlaylistId { get; set; }
         public UserPlaylist Playlist { get; set; } = null!;
 
-        // Песня из PlaylistService
         public int SongId { get; set; }
 
         public int Order { get; set; } = 1;

@@ -1,4 +1,4 @@
-﻿// Application/Services/ArtistService.cs
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,7 +66,7 @@ namespace Playlist.Api.Application.Services
             var newName = dto.Name.Trim();
             var newCountry = dto.Country?.Trim();
 
-            // уникальность имени с исключением текущего артиста
+           
             if (!string.Equals(entity.Name, newName, StringComparison.OrdinalIgnoreCase) &&
                 await _artists.ExistsByNameExceptAsync(newName, id, ct))
                 throw new InvalidOperationException("Artist with the same name already exists.");
@@ -101,7 +101,7 @@ namespace Playlist.Api.Application.Services
             return items.Select(_map.Map<ArtistDto>).ToList();
         }
 
-        // --------- GetAllWithSongs (список с песнями) ---------
+    
         public async Task<IReadOnlyList<ArtistWithSongsListItemDto>> GetAllWithSongsAsync(CancellationToken ct = default)
         {
             var items = await _artists.GetAllWithSongsAsync(ct);
@@ -116,7 +116,7 @@ namespace Playlist.Api.Application.Services
             )).ToList();
         }
 
-        // --------- Get details by id (с песнями) ---------
+     
         public async Task<ArtistDetailsDto?> GetAsync(int id, CancellationToken ct = default)
         {
             var a = await _artists.GetWithSongsAsync(id, ct);
@@ -130,28 +130,28 @@ namespace Playlist.Api.Application.Services
             return new ArtistDetailsDto(a.Id, a.Name, a.Country, songs);
         }
 
-        // --------- Add existing song to artist (1:N) ---------
+   
         public async Task AddSongAsync(int artistId, int songId, CancellationToken ct = default)
         {
-            // Проверим наличие артиста и песни
+            // chek exist artist and song
             var artist = await _artists.GetByIdAsync(artistId, ct)
                          ?? throw new KeyNotFoundException("Artist not found.");
             var song = await _songs.GetByIdAsync(songId, ct)
                        ?? throw new KeyNotFoundException("Song not found.");
 
-            // Идемпотентность: уже принадлежит этому артисту
+          
             if (song.ArtistId == artistId) return;
 
             await _uow.ExecuteInTransactionAsync(async _ =>
             {
-                // Переназначаем песню на артиста (ArtistId not null)
+               
                 song.ArtistId = artistId;
                 await _songs.UpdateAsync(song, ct);
             }, ct);
         }
 
         // --------- Delete song from artist ---------
-        // В ТЕКУЩЕЙ модели (ArtistId not null) "удалить из артиста" = удалить песню.
+       
         public async Task DeleteSongFromArtistAsync(int artistId, int songId, CancellationToken ct = default)
         {
             await _uow.ExecuteInTransactionAsync(async _ =>

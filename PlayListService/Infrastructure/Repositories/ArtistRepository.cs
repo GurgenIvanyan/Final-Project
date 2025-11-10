@@ -1,4 +1,4 @@
-﻿// Infrastructure/Persistence/Repositories/ArtistRepository.cs
+﻿
 using Microsoft.EntityFrameworkCore;
 using Playlist.Api.Core.Entities;
 using Playlist.Api.Core.Interfaces.Repositories;
@@ -31,7 +31,7 @@ public class ArtistRepository : GenericRepository<Artist>, IArtistRepository
     public async Task DeleteSongOfArtistAsync(int artistId, int songId, CancellationToken ct = default)
     {
         var song = await _db.Songs.FirstOrDefaultAsync(s => s.Id == songId && s.ArtistId == artistId, ct);
-        if (song is null) return; // ничего не делаем, идемпотентность
-        _db.Songs.Remove(song);   // удаляем песню (ArtistId not null — отвязать нельзя)
+        if (song is null) return; 
+        _db.Songs.Remove(song);   
     }
 }

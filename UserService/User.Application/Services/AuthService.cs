@@ -1,8 +1,8 @@
-﻿// Application/Services/AuthService.cs
+﻿
 using User.Application.DTOs;
 using User.Application.Services.IServices;
 using User.Core.Interfaces.Repositories;
-using User.Application.Abstractions.Security;   // <-- добавь
+using User.Application.Abstractions.Security;   
 
 using UserEntity = User.Core.Entities.User;
 

@@ -1,4 +1,4 @@
-﻿// Core/Interfaces/Repositories/IGenericRepository.cs
+﻿
 using System.Linq.Expressions;
 
 namespace Playlist.Api.Core.Interfaces.Repositories;

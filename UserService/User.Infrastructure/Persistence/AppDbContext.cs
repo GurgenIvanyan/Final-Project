@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using User.Core.Entities;
-
-// Алиасы, чтобы не конфликтовать с корневым namespace "User"
 using UserEntity = User.Core.Entities.User;
 using UserPlaylistEntity = User.Core.Entities.UserPlaylist;
 using UserPlaylistSongEntity = User.Core.Entities.UserPlaylistSong;
@@ -58,7 +56,7 @@ namespace User.Infrastructure.Persistence
                 e.Property(x => x.Description)
                     .HasMaxLength(2000);
 
-                // Требует Microsoft.EntityFrameworkCore.Relational (или провайдера Npgsql/SqlServer)
+               
                 e.Property(x => x.IsPublic)
                     .HasDefaultValue(false);
 

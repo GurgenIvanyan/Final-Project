@@ -1,4 +1,4 @@
-﻿// Core/Interfaces/Repositories/IUnitOfWork.cs
+﻿
 namespace Playlist.Api.Core.Interfaces.Repositories;
 
 public interface IUnitOfWork

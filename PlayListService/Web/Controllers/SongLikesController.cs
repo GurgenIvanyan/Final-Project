@@ -21,7 +21,7 @@ namespace Playlist.Api.Web.Controllers
             return id;
         }
 
-        // POST /songs/{songId}/likes  -> +1
+        
         [HttpPost("{songId:int}/likes")]
         [Authorize]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
@@ -38,8 +38,8 @@ namespace Playlist.Api.Web.Controllers
         public async Task<ActionResult<int>> Unlike(int songId, CancellationToken ct)
         {
             var uid = UserIdOrThrow();
-            await _svc.RemoveLikeAsync(songId, uid, ct);       // <- удаляем лайк пользователя
-            var score = await _svc.GetScoreAsync(songId, ct);  // <- текущий суммарный счет
+            await _svc.RemoveLikeAsync(songId, uid, ct);       
+            var score = await _svc.GetScoreAsync(songId, ct);  
             return Ok(score);
         }
 

@@ -8,7 +8,7 @@ using User.Application.Abstractions.Security;
 using User.Application.Services;
 using User.Application.Services.IServices;
 using User.Core.Interfaces.Repositories;
-using User.Infrastructure.Http;                 // ForwardAuthHeaderHandler, PlaylistGateway, ProblemDetailsHandler
+using User.Infrastructure.Http;                 
 using User.Infrastructure.Persistence;
 using User.Infrastructure.Persistence.Repositories;
 using User.Infrastructure.Security;
@@ -34,7 +34,6 @@ builder.Services.AddScoped<IUserPlaylistService, UserPlaylistService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 
-// HTTP → Playlist.Api (проброс Authorization + перехват RFC7807)
 builder.Services.AddTransient<ForwardAuthHeaderHandler>();
 builder.Services.AddTransient<ProblemDetailsHandler>();
 

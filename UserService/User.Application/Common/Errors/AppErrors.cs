@@ -2,7 +2,7 @@
 
 public static class AppErrors
 {
-    // Коды (type) — стабильные «машинные» значения
+   
     public const string Unauthorized = "auth.unauthorized";
     public const string Forbidden = "auth.forbidden";
     public const string NotFound = "common.not_found";
@@ -11,7 +11,7 @@ public static class AppErrors
     public const string BadRequest = "common.bad_request";
     public const string Unexpected = "common.unexpected";
 
-    // Красивые тексты (EN; при желании локализуешь позже)
+
     public static string UserUnauthorized() => "User is not authorized.";
     public static string ForbiddenAction() => "You don't have permission to perform this action.";
     public static string PlaylistNotFound(int id) => $"Playlist with id {id} was not found.";

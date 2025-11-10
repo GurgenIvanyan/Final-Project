@@ -1,4 +1,4 @@
-﻿// Core/Interfaces/Repositories/IPlaylistRepository.cs
+﻿
 using Playlist.Api.Core.Entities;
 using Playlist.Api.Core.Interfaces.Repositories;
 using PlaylistEntity = Playlist.Api.Core.Entities.Playlist;
@@ -12,6 +12,6 @@ public interface IPlaylistRepository : IGenericRepository<PlaylistEntity>
     Task AddSongAsync(int playlistId, int songId, int order, int? addedByUserId = null, CancellationToken ct = default);
     Task RemoveSongAsync(int playlistId, int songId, CancellationToken ct = default);
     Task<int> GetMaxOrderAsync(int playlistId, CancellationToken ct = default);
-    Task ShiftOrdersDownAsync(int playlistId, int fromOrderInclusive, CancellationToken ct = default); // for insert in middle
+    Task ShiftOrdersDownAsync(int playlistId, int fromOrderInclusive, CancellationToken ct = default); 
     Task UpdateSongOrderAsync(int playlistId, int songId, int newOrder, CancellationToken ct = default);
 }

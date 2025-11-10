@@ -8,12 +8,12 @@ namespace Playlist.Api.Infrastructure.Caching
     {
         private readonly IDistributedCache _cache;
 
-        // Общие и безопасные опции сериализации
+       
         private static readonly JsonSerializerOptions _opts = new()
         {
             PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
             DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
-            ReferenceHandler = ReferenceHandler.IgnoreCycles,   // не падать на циклах EF-моделей
+            ReferenceHandler = ReferenceHandler.IgnoreCycles,   
             WriteIndented = false
         };
 
@@ -28,7 +28,7 @@ namespace Playlist.Api.Infrastructure.Caching
             }
             catch
             {
-                // fail-open: если Redis/десериализация упали — просто вернём кэш-мисс
+            
                 return default;
             }
         }
@@ -47,14 +47,14 @@ namespace Playlist.Api.Infrastructure.Caching
             }
             catch
             {
-                // fail-open: молча игнорируем проблемы с Redis
+                
             }
         }
 
         public Task RemoveAsync(string key, CancellationToken ct = default)
         {
             try { return _cache.RemoveAsync(key, ct); }
-            catch { return Task.CompletedTask; } // fail-open
+            catch { return Task.CompletedTask; } 
         }
     }
 }

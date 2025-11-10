@@ -14,22 +14,19 @@ public class ArtistsController : ControllerBase
     private readonly IArtistService _svc;
     public ArtistsController(IArtistService svc) => _svc = svc;
 
-    // Базовый список без песен (оставил как было)
     [HttpGet]
     [AllowAnonymous]
     [ProducesResponseType(typeof(IReadOnlyList<ArtistDto>), StatusCodes.Status200OK)]
     public Task<IReadOnlyList<ArtistDto>> GetAll(CancellationToken ct) => _svc.GetAllAsync(ct);
 
-    // Новый: список артистов С песнями (под твой формат)
-    // GET /artists/with-songs
+
     [HttpGet("with-songs")]
     [AllowAnonymous]
     [ProducesResponseType(typeof(IReadOnlyList<ArtistWithSongsListItemDto>), StatusCodes.Status200OK)]
     public Task<IReadOnlyList<ArtistWithSongsListItemDto>> GetAllWithSongs(CancellationToken ct)
         => _svc.GetAllWithSongsAsync(ct);
 
-    // Новый: детали артиста (с песнями)
-    // GET /artists/{id}
+
     [HttpGet("{id:int}")]
     [AllowAnonymous]
     [ProducesResponseType(typeof(ArtistDetailsDto), StatusCodes.Status200OK)]
@@ -61,8 +58,7 @@ public class ArtistsController : ControllerBase
         return NoContent();
     }
 
-    // Новый: удалить песню у артиста
-    // DELETE /artists/{artistId}/songs/{songId}
+   
     [HttpDelete("{artistId:int}/songs/{songId:int}")]
     [Authorize(Roles = "Admin")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]

@@ -1,4 +1,4 @@
-﻿// Infrastructure/Persistence/Repositories/PlaylistRepository.cs
+﻿
 using Microsoft.EntityFrameworkCore;
 using Playlist.Api.Core.Entities;
 using Playlist.Api.Core.Interfaces.Repositories;

@@ -21,7 +21,7 @@ public class SongService : ISongService
 
     private static string SongKey(int id) => $"song:{id}";
     private const int HotLikeThreshold = 10;
-    private static readonly TimeSpan HotSongTtl = TimeSpan.FromMinutes(15); // ← ДОБАВЛЕНО
+    private static readonly TimeSpan HotSongTtl = TimeSpan.FromMinutes(15); 
 
     public SongService(
         ISongRepository songs,
@@ -119,7 +119,7 @@ public class SongService : ISongService
             s.Id, s.Title, s.Genre, s.ArtistId, s.Artist?.Name ?? "", playlists);
 
         if (score > HotLikeThreshold)
-            await _cache.SetAsync(SongKey(id), dto, HotSongTtl, ct); // ← ИСПОЛЬЗУЕМ TTL
+            await _cache.SetAsync(SongKey(id), dto, HotSongTtl, ct); 
 
         return dto;
     }

@@ -83,7 +83,7 @@ namespace User.Infrastructure.Persistence.Repositories
             var q = _db.UserPlaylists
                 .AsNoTracking()
                 .Where(p => p.IsPublic && p.OwnerUserId != requesterUserId)
-                .Include(p => p.Songs); // <-- важное отличие (нужны SongId + Order)
+                .Include(p => p.Songs); 
 
             var total = await q.CountAsync(ct);
             var items = await q

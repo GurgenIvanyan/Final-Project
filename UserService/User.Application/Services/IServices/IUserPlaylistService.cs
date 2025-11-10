@@ -21,7 +21,7 @@ namespace User.Application.Services.IServices
         Task ReorderAsync(int ownerUserId, int playlistId, int songId, int newOrder, CancellationToken ct = default);
 
         Task<PagedResult<UserPlaylistDto>> GetMineAsync(int ownerUserId, int page, int pageSize, CancellationToken ct = default);
-        Task<UserPlaylistDetailsDto?> GetDetailsAsync(int requesterUserId, int playlistId, CancellationToken ct = default); // учитывает IsPublic/Owner
+        Task<UserPlaylistDetailsDto?> GetDetailsAsync(int requesterUserId, int playlistId, CancellationToken ct = default); 
         Task<PagedResult<UserPlaylistDto>> GetPublicByOthersAsync(int requesterUserId, int page, int pageSize, CancellationToken ct = default);
 
         Task<PagedResult<PublicPlaylistWithSongsDto>> GetPublicByOthersWithSongsAsync(int requesterUserId, int page, int pageSize, CancellationToken ct = default);

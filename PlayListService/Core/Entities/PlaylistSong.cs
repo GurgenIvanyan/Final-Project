@@ -1,4 +1,4 @@
-﻿// Core/Entities/PlaylistSong.cs
+﻿
 namespace Playlist.Api.Core.Entities;
 
 public class PlaylistSong
@@ -9,8 +9,8 @@ public class PlaylistSong
     public int SongId { get; set; }
     public Song Song { get; set; } = null!;
 
-    public int Order { get; set; }                 // position in playlist
+    public int Order { get; set; }                 
     public DateTime AddedAtUtc { get; set; } = DateTime.UtcNow;
-    public int? AddedByUserId { get; set; }        // optional: who added
+    public int? AddedByUserId { get; set; }       
     public ICollection<PlaylistSongVote> Votes { get; set; } = new List<PlaylistSongVote>();
 }

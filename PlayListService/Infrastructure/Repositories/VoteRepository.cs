@@ -1,4 +1,4 @@
-﻿// Infrastructure/Persistence/Repositories/VoteRepository.cs
+﻿
 using Microsoft.EntityFrameworkCore;
 using Playlist.Api.Core.Entities;
 using Playlist.Api.Core.Interfaces.Repositories;
@@ -16,13 +16,13 @@ namespace Playlist.Api.Infrastructure.Persistence.Repositories
             if (page < 1) page = 1;
             if (pageSize <= 0) pageSize = 20;
 
-            // агрегируем лайки по SongId
+     
             var agg = _db.PlaylistSongVotes
                 .GroupBy(v => v.SongId)
                 .Select(g => new { SongId = g.Key, Likes = g.Sum(x => x.Value) })
                 .Where(a => a.Likes >= minLikes);
 
-            // ЯВНО присоединяем Songs и Artists
+          
             var q = from a in agg
                     join s in _db.Songs on a.SongId equals s.Id
                     join ar in _db.Artists on s.ArtistId equals ar.Id
@@ -46,7 +46,7 @@ namespace Playlist.Api.Infrastructure.Persistence.Repositories
                 .Take(pageSize)
                 .ToListAsync(ct);
 
-            // строим "плоский" Song с вложенным Artist — без трекинга, без Include
+           
             var items = rows.Select(r =>
                 (new Song
                 {

@@ -1,4 +1,4 @@
-﻿// Playlist.Api.Infrastructure/Persistence/Repositories/SongLikeRepository.cs
+﻿
 using Microsoft.EntityFrameworkCore;
 using Playlist.Api.Core.Entities;
 using Playlist.Api.Core.Interfaces.Repositories;

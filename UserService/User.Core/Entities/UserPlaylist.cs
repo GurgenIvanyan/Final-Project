@@ -14,7 +14,7 @@ namespace User.Core.Entities
         public string? Description { get; set; }
         public bool IsPublic { get; set; } = false;
 
-        // Если импортировали из PlaylistService — храним источник
+      
         public int? SourcePlaylistId { get; set; }
 
         public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;

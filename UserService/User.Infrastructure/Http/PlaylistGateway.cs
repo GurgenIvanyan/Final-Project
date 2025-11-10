@@ -39,7 +39,7 @@ namespace User.Infrastructure.Http
 
        
 
-        // глобальные лайки — Authorization прокидывается хендлером
+     
         public async Task<int> LikeSongAsync(int songId, int _ignored, CancellationToken ct = default)
         {
             var resp = await _http.PostAsync($"/songs/{songId}/likes", content: null, ct);
@@ -98,18 +98,16 @@ namespace User.Infrastructure.Http
             var q = string.Join(",", arr);
             try
             {
-                // если в Playlist.Api есть батч-эндпоинт:
-                // GET /songs/meta/by-ids?ids=1,2,3
+              
                 var list = await _http.GetFromJsonAsync<List<ExternalSongMetaDto>>($"/songs/meta/by-ids?ids={q}", ct);
                 if (list is not null)
                     return list.GroupBy(x => x.Id).ToDictionary(g => g.Key, g => g.First());
             }
             catch
             {
-                // падаем в запасной план
+                
             }
 
-            // Fallback: по одному
             var result = new Dictionary<int, ExternalSongMetaDto>(arr.Length);
             foreach (var id in arr)
             {

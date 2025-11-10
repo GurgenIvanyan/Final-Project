@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using User.Application.Abstractions.Http;
-using User.Application.Abstractions.Security; // ICurrentUserService
+using User.Application.Abstractions.Security; 
 using User.Application.DTOs;
 using User.Application.Services.IServices;
 using User.Shared.Common;
@@ -93,7 +93,7 @@ namespace User.Web.Controllers
             return NoContent();
         }
 
-        // Мои плейлисты
+       
         [HttpGet("mine")]
         [Authorize]
         public async Task<ActionResult<PagedResult<UserPlaylistDto>>> GetMine(
@@ -104,7 +104,6 @@ namespace User.Web.Controllers
             return Ok(res);
         }
 
-        // Детали (чужой доступен только если публичный)
         [HttpGet("{id:int}")]
         [Authorize]
         public async Task<ActionResult<UserPlaylistDetailsDto>> GetDetails(int id, CancellationToken ct)
@@ -114,7 +113,6 @@ namespace User.Web.Controllers
             return res is null ? NotFound() : Ok(res);
         }
 
-        // Топ песен по лайкам — прокси в Playlist.Api
         [HttpGet("songs/top-liked")]
         [AllowAnonymous]
         [ProducesResponseType(typeof(PagedResult<SongWithLikesDto>), StatusCodes.Status200OK)]
@@ -142,8 +140,7 @@ namespace User.Web.Controllers
         }
 
 
-        // ====== НОВОЕ: ГЛОБАЛЬНЫЕ лайки по песне (без привязки к плейлисту) ======
-        // POST /songs/{songId}/like
+       
         [HttpPost("~/songs/{songId:int}/like")]
         [Authorize]
         public async Task<ActionResult<int>> LikeSong(int songId, CancellationToken ct)
@@ -153,7 +150,6 @@ namespace User.Web.Controllers
             return Ok(score);
         }
 
-        // DELETE /songs/{songId}/like
         [HttpDelete("~/songs/{songId:int}/like")]
         [Authorize]
         public async Task<ActionResult<int>> UnlikeSong(int songId, CancellationToken ct)
@@ -163,7 +159,7 @@ namespace User.Web.Controllers
             return Ok(score);
         }
 
-        // GET /songs/{songId}/likes  -> текущее количество глобальных лайков
+        
         [HttpGet("~/songs/{songId:int}/likes")]
         [AllowAnonymous]
         public Task<int> GetSongLikes(int songId, CancellationToken ct)
@@ -187,7 +183,7 @@ namespace User.Web.Controllers
     [FromQuery] int pageSize = 20,
     CancellationToken ct = default)
         {
-            var uid = _current.UserIdOrThrow(); // твой CurrentUserService уже есть
+            var uid = _current.UserIdOrThrow(); 
             var res = await _svc.GetPublicByOthersAsync(uid, page, pageSize, ct);
             return Ok(res);
         }
@@ -224,8 +220,7 @@ namespace User.Web.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetSongById(int songId, CancellationToken ct)
         {
-            // Проксируем запрос в Playlist.Api — если у песни >10 лайков,
-            // там уже сработает Redis и вернёт быстро.
+            
             var dto = await _gateway.GetSongAsync(songId, ct);
             return dto is null ? NotFound() : Ok(dto);
         }

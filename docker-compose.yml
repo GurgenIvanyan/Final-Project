@@ -1,40 +1,40 @@
 services:
   playlist_api:
     build:
-      context: ./PlayListService          # ⟵ РОДИТЕЛЬ папки Playlist.Api
+      context: ./PlayListService          # родительская папка Playlist.Api
       dockerfile: ./Playlist.Api/Dockerfile
     image: playlist-api:latest
     container_name: playlist-api
     environment:
       ASPNETCORE_ENVIRONMENT: "Production"
+      ASPNETCORE_URLS: "http://+:8080"
       ConnectionStrings__Postgres: "Host=postgres;Port=5432;Database=Playlist.Api;Username=postgres;Password=postgres"
       Redis__Connection: "redis:6379"
-      Jwt__Issuer: "playlist-api"
-      Jwt__Audience: "playlist-clients"
-      Jwt__SigningKey: "CHANGE_ME_VERY_LONG_SECRET_KEY_32+_BYTES_MINIMUM!!"
+      # JWT берётся из appsettings.Production.json
     depends_on:
       - postgres
       - redis
     ports:
       - "8080:8080"
+    restart: unless-stopped
 
   user_service:
     build:
-      context: ./UserService              # ⟵ РОДИТЕЛЬ папки UserService (entry-проект)
+      context: ./UserService              # родительская папка entry-проекта UserService
       dockerfile: ./UserService/Dockerfile
     image: user-service:latest
     container_name: user-service
     environment:
       ASPNETCORE_ENVIRONMENT: "Production"
+      ASPNETCORE_URLS: "http://+:8081"
       ConnectionStrings__Postgres: "Host=postgres;Port=5432;Database=UserService;Username=postgres;Password=postgres"
-      Jwt__Issuer: "user-service"
-      Jwt__Audience: "user-clients"
-      Jwt__SigningKey: "CHANGE_ME_VERY_LONG_SECRET_KEY_32+_BYTES_MINIMUM!!"
       PlaylistService__BaseUrl: "http://playlist-api:8080"
+      # JWT берётся из appsettings.Production.json
     depends_on:
       - postgres
     ports:
       - "8081:8081"
+    restart: unless-stopped
 
   postgres:
     image: postgres:16
@@ -42,15 +42,17 @@ services:
     environment:
       POSTGRES_PASSWORD: postgres
     ports:
-      - "5433:5432"
+      - "5433:5432"   # с хоста подключаемся на 5433
     volumes:
       - pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
 
   redis:
     image: redis:7
     container_name: redis
     ports:
       - "6379:6379"
+    restart: unless-stopped
 
 volumes:
   pgdata:

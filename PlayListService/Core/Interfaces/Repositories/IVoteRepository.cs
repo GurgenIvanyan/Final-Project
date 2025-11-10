@@ -1,4 +1,4 @@
-﻿// Core/Interfaces/Repositories/IVoteRepository.cs
+﻿
 using Playlist.Api.Core.Entities;
 using Playlist.Api.Core.Interfaces.Repositories;
 
