@@ -12,5 +12,5 @@ public class PlaylistSong
     public int Order { get; set; }                 
     public DateTime AddedAtUtc { get; set; } = DateTime.UtcNow;
     public int? AddedByUserId { get; set; }       
-    public ICollection<PlaylistSongVote> Votes { get; set; } = new List<PlaylistSongVote>();
+   
 }

@@ -27,7 +27,7 @@ public class PlaylistRepository : GenericRepository<PlaylistEntity>, IPlaylistRe
     public Task<PlaylistEntity?> GetFullAsync(int id, CancellationToken ct = default)
         => _db.Playlists
               .Include(p => p.PlaylistSongs).ThenInclude(ps => ps.Song).ThenInclude(s => s.Artist)
-              .Include(p => p.PlaylistSongs).ThenInclude(ps => ps.Votes)
+              .Include(p => p.PlaylistSongs)
               .FirstOrDefaultAsync(p => p.Id == id, ct);
 
     public Task<bool> ContainsSongAsync(int playlistId, int songId, CancellationToken ct = default)

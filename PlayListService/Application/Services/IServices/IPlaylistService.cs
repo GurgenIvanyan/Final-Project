@@ -14,8 +14,8 @@ public interface IPlaylistService
     Task RemoveSongAsync(int playlistId, int songId, CancellationToken ct = default);
     Task ReorderAsync(int playlistId, int songId, int newOrder, CancellationToken ct = default);
 
-    // TOP by likes
-    Task<PagedResult<SongWithLikesDto>> GetTopLikedAsync(int minLikes, int page, int pageSize, CancellationToken ct = default);
+
+ 
 
    
 }

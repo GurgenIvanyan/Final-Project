@@ -113,15 +113,14 @@ namespace User.Web.Controllers
             return res is null ? NotFound() : Ok(res);
         }
 
-        [HttpGet("songs/top-liked")]
-        [AllowAnonymous]
-        [ProducesResponseType(typeof(PagedResult<SongWithLikesDto>), StatusCodes.Status200OK)]
+        [HttpGet("top-liked")]
+        [Authorize] 
         public Task<PagedResult<SongWithLikesDto>> GetTopLiked(
-            [FromQuery] int minLikes = 10,
-            [FromQuery] int page = 1,
-            [FromQuery] int pageSize = 20,
-            CancellationToken ct = default)
-            => _gateway.GetTopLikedAsync(minLikes, page, pageSize, ct);
+        [FromQuery] int minLikes = 10,
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 20,
+        CancellationToken ct = default)
+        => _gateway.GetTopLikedAsync(minLikes, page, pageSize, ct);
 
         // Поиск песен — абсолютный маршрут (как в Playlist.Api)
         [HttpGet("~/songs/search")]
@@ -145,8 +144,7 @@ namespace User.Web.Controllers
         [Authorize]
         public async Task<ActionResult<int>> LikeSong(int songId, CancellationToken ct)
         {
-            var uid = _current.UserIdOrThrow();
-            var score = await _gateway.LikeSongAsync(songId, uid, ct);
+            var score = await _gateway.LikeSongAsync(songId, 0, ct);
             return Ok(score);
         }
 
@@ -154,8 +152,8 @@ namespace User.Web.Controllers
         [Authorize]
         public async Task<ActionResult<int>> UnlikeSong(int songId, CancellationToken ct)
         {
-            var uid = _current.UserIdOrThrow();
-            var score = await _gateway.UnlikeSongAsync(songId, uid, ct);
+       
+            var score = await _gateway.UnlikeSongAsync(songId, 0, ct);
             return Ok(score);
         }
 

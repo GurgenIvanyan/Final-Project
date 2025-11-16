@@ -1,0 +1,15 @@
+# Visual Studio
+.vs/
+**/.vs/
+*.user
+*.suo
+
+# Build folders
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Others
+*.log
+*.userprefs

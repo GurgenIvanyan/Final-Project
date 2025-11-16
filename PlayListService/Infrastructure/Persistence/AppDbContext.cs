@@ -17,7 +17,7 @@ namespace Playlist.Api.Infrastructure.Persistence
         public DbSet<SongMetadata> SongMetadata => Set<SongMetadata>();
         public DbSet<PlaylistEntity> Playlists => Set<PlaylistEntity>();
         public DbSet<PlaylistSong> PlaylistSongs => Set<PlaylistSong>();
-        public DbSet<PlaylistSongVote> PlaylistSongVotes => Set<PlaylistSongVote>();
+       
 
         protected override void OnModelCreating(ModelBuilder b)
         {
@@ -115,20 +115,7 @@ namespace Playlist.Api.Infrastructure.Persistence
                  .OnDelete(DeleteBehavior.Cascade);
             });
 
-            // -------- PlaylistSongVote (unique) ---
-            b.Entity<PlaylistSongVote>(e =>
-            {
-                e.ToTable("playlist_song_votes");
-                e.HasKey(v => new { v.PlaylistId, v.SongId, v.UserId });
-
-                e.Property(v => v.Value).IsRequired();
-                e.ToTable(tb => tb.HasCheckConstraint("CK_Vote_Value", "\"Value\" IN (-1, 1)"));
-
-                e.HasOne(v => v.PlaylistSong)
-                 .WithMany(ps => ps.Votes)
-                 .HasForeignKey(v => new { v.PlaylistId, v.SongId })
-                 .OnDelete(DeleteBehavior.Cascade);
-            });
+         
             b.Entity<SongLike>(e =>
             {
                 e.ToTable("song_likes");

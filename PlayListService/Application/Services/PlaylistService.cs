@@ -19,7 +19,6 @@ namespace Playlist.Api.Application.Services
     {
         private readonly IPlaylistRepository _playlists;
         private readonly ISongRepository _songs;
-        private readonly IVoteRepository _votes;
         private readonly IUnitOfWork _uow;
         private readonly IMapper _map;
         private readonly RedisCacheService _cache;
@@ -27,14 +26,13 @@ namespace Playlist.Api.Application.Services
         public PlaylistService(
             IPlaylistRepository playlists,
             ISongRepository songs,
-            IVoteRepository votes,
             IUnitOfWork uow,
             IMapper map,
             RedisCacheService cache)
         {
             _playlists = playlists;
             _songs = songs;
-            _votes = votes;
+            //_votes = votes;
             _uow = uow;
             _map = map;
             _cache = cache;
@@ -43,10 +41,6 @@ namespace Playlist.Api.Application.Services
         // ------------ cache helpers ------------
         private static string CacheKeyListPage(string? genre, int page, int size)
             => $"playlists:genre={(genre ?? "*")}:p{page}:s{size}";
-
-        private static string TopKey(int minLikes, int page, int size)
-            => $"songs:top:min={minLikes}:p{page}:s{size}";
-
         private static string PlaylistKey(int id) => $"playlist:{id}";
         private static string SongKey(int id) => $"song:{id}";
 
@@ -95,6 +89,7 @@ namespace Playlist.Api.Application.Services
                     p.Id,
                     p.Name,
                     p.Genre,
+                    p.Description,
                     p.PlaylistSongs.Count))
                 .ToList();
 
@@ -142,7 +137,7 @@ namespace Playlist.Api.Application.Services
             }, ct);
 
             await _cache.RemoveAsync(PlaylistKey(playlistId), ct);
-            await _cache.RemoveAsync(SongKey(songId), ct); // invalidate song cache
+            await _cache.RemoveAsync(SongKey(songId), ct); 
         }
 
         // ------------- Insert at position -------------
@@ -162,7 +157,7 @@ namespace Playlist.Api.Application.Services
             }, ct);
 
             await _cache.RemoveAsync(PlaylistKey(playlistId), ct);
-            await _cache.RemoveAsync(SongKey(songId), ct); // invalidate song cache
+            await _cache.RemoveAsync(SongKey(songId), ct); 
         }
 
         // ------------- Bulk add -------------
@@ -200,7 +195,7 @@ namespace Playlist.Api.Application.Services
             }, ct);
 
             await _cache.RemoveAsync(PlaylistKey(playlistId), ct);
-            await _cache.RemoveAsync(SongKey(songId), ct); // invalidate song cache
+            await _cache.RemoveAsync(SongKey(songId), ct); 
         }
 
         // ------------- Reorder -------------
@@ -220,42 +215,10 @@ namespace Playlist.Api.Application.Services
             }, ct);
 
             await _cache.RemoveAsync(PlaylistKey(playlistId), ct);
-            await _cache.RemoveAsync(SongKey(songId), ct); // invalidate song cache
+            await _cache.RemoveAsync(SongKey(songId), ct); 
         }
 
-        // ------------- TOP liked -------------
-        public async Task<PagedResult<SongWithLikesDto>> GetTopLikedAsync(int minLikes, int page, int pageSize, CancellationToken ct = default)
-        {
-            if (minLikes < 0) minLikes = 0;
-            if (page < 1) page = 1;
-            if (pageSize <= 0) pageSize = 20;
-
-            var cacheKey = TopKey(minLikes, page, pageSize);
-            var cached = await _cache.GetAsync<PagedResult<SongWithLikesDto>>(cacheKey, ct);
-            if (cached is not null) return cached;
-
-            var (rows, total) = await _votes.GetTopLikedSongsAsync(minLikes, page, pageSize, ct);
-
-            var items = rows.Select(r => new SongWithLikesDto(
-                r.song.Id,
-                r.song.Title,
-                r.song.Genre,
-                r.song.ArtistId,
-                r.song.Artist.Name,
-                r.likes
-            )).ToList();
-
-            var result = new PagedResult<SongWithLikesDto>
-            {
-                Items = items,
-                Total = total,
-                Page = page,
-                PageSize = pageSize
-            };
-
-            await _cache.SetAsync(cacheKey, result, TimeSpan.FromMinutes(3), ct);
-            return result;
-        }
+      
 
         // ----------------- mapping -----------------
         private static PlaylistDetailsDto ToDetails(PlaylistEntity entity)
@@ -270,16 +233,13 @@ namespace Playlist.Api.Application.Services
                     ps.Song.Artist.Name))
                 .ToList();
 
-            var votes = entity.PlaylistSongs
-                .ToDictionary(ps => ps.SongId, ps => ps.Votes.Sum(v => v.Value));
-
             return new PlaylistDetailsDto(
                 entity.Id,
                 entity.Name,
                 entity.Description,
                 entity.Genre,
-                songs,
-                votes);
+                songs);
         }
+
     }
 }

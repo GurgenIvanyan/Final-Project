@@ -1725,14 +1725,6 @@
               "$ref": "#/components/schemas/SongDto"
             },
             "nullable": true
-          },
-          "votes": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1767,6 +1759,10 @@
             "format": "int32"
           },
           "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
             "type": "string",
             "nullable": true
           },

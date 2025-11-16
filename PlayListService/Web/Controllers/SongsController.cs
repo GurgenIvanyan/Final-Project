@@ -12,12 +12,13 @@ namespace Playlist.Api.Web.Controllers
     public class SongsController : ControllerBase
     {
         private readonly ISongService _songSvc;
-        private readonly IPlaylistService _playlistSvc;
+        private readonly ISongLikeService _songLikeSvc;
 
-        public SongsController(ISongService songSvc, IPlaylistService playlistSvc)
+        public SongsController(ISongService songSvc,  ISongLikeService songLikeSvc)
         {
             _songSvc = songSvc;
-            _playlistSvc = playlistSvc;
+            _songLikeSvc = songLikeSvc;
+
         }
 
         [HttpPost]
@@ -73,16 +74,18 @@ namespace Playlist.Api.Web.Controllers
             return Ok(res.ToList());
         }
 
-       
+
         [HttpGet("top-liked")]
         [AllowAnonymous]
         [ProducesResponseType(typeof(PagedResult<SongWithLikesDto>), StatusCodes.Status200OK)]
         public Task<PagedResult<SongWithLikesDto>> GetTopLiked(
-            [FromQuery] int minLikes = 10,
-            [FromQuery] int page = 1,
-            [FromQuery] int pageSize = 20,
-            CancellationToken ct = default)
-            => _playlistSvc.GetTopLikedAsync(minLikes, page, pageSize, ct);
+        [FromQuery] int minLikes = 10,
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 20,
+        CancellationToken ct = default)
+        => _songLikeSvc.GetTopLikedGlobalAsync(minLikes, page, pageSize, ct); 
+
+
 
 
         [HttpGet("meta/by-ids")]

@@ -6,5 +6,6 @@ using System.Threading.Tasks;
 
 namespace Application.DTOs
 {
-    public record PlaylistListItemDto(int Id, string Name, string? Genre, int SongCount);
+    public record PlaylistListItemDto(int Id, string Name, string? Description, string? Genre, int SongCount);
+
 }
