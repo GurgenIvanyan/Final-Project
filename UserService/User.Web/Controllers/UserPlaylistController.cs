@@ -222,6 +222,29 @@ namespace User.Web.Controllers
             var dto = await _gateway.GetSongAsync(songId, ct);
             return dto is null ? NotFound() : Ok(dto);
         }
+        [HttpDelete("{id:int}")]
+        [Authorize]
+        public async Task<IActionResult> Delete(int id, CancellationToken ct)
+        {
+            var uid = _current.UserIdOrThrow();
+            await _svc.DeleteAsync(uid, id, ct);
+            return NoContent();
+        }
+        [HttpGet("external/{id:int}")]
+        [AllowAnonymous]
+        [ProducesResponseType(typeof(ExternalPlaylistDetailsDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetExternalPlaylistDetails(int id, CancellationToken ct = default)
+        {
+            var dto = await _gateway.GetPlaylistAsync(id, ct);
+            if (dto is null)
+                return NotFound();
+
+            return Ok(dto);
+        }
+
+
+
 
     }
 

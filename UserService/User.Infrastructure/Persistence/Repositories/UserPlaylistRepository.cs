@@ -28,7 +28,10 @@ namespace User.Infrastructure.Persistence.Repositories
         }
 
         public Task<bool> ContainsSongAsync(int playlistId, int songId, CancellationToken ct = default)
-            => _db.UserPlaylistSongs.AnyAsync(x => x.UserPlaylistId == playlistId && x.SongId == songId, ct);
+        {
+            return _db.UserPlaylistSongs
+                .AnyAsync(x => x.UserPlaylistId == playlistId && x.SongId == songId, ct);
+        }
 
         public async Task<int> GetMaxOrderAsync(int playlistId, CancellationToken ct = default)
             => await _db.UserPlaylistSongs.Where(x => x.UserPlaylistId == playlistId).MaxAsync(x => (int?)x.Order, ct) ?? 0;
@@ -39,10 +42,16 @@ namespace User.Infrastructure.Persistence.Repositories
             return Task.CompletedTask;
         }
 
-        public Task RemoveSongAsync(int playlistId, int songId, CancellationToken ct = default)
+        public async Task RemoveSongAsync(int playlistId, int songId, CancellationToken ct = default)
         {
-            _db.UserPlaylistSongs.Remove(new UserPlaylistSong { UserPlaylistId = playlistId, SongId = songId });
-            return Task.CompletedTask;
+            var link = await _db.UserPlaylistSongs
+                .FirstOrDefaultAsync(x => x.UserPlaylistId == playlistId && x.SongId == songId, ct);
+
+            if (link is null)
+                return; // already removed / not found
+
+            _db.UserPlaylistSongs.Remove(link);
+            // SaveChangesAsync կանչում ա UnitOfWork-ը, ոչ թե այստեղ
         }
 
         public Task ShiftOrdersDownAsync(int playlistId, int fromOrderInclusive, CancellationToken ct = default)
@@ -94,5 +103,12 @@ namespace User.Infrastructure.Persistence.Repositories
 
             return (items, total);
         }
+        // UserPlaylistRepository.cs
+        public Task RemoveAllSongsAsync(int playlistId, CancellationToken ct = default)
+            => _db.UserPlaylistSongs
+                  .Where(x => x.UserPlaylistId == playlistId)
+                  .ExecuteDeleteAsync(ct);
+
+
     }
 }

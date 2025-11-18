@@ -9,7 +9,14 @@ namespace User.Infrastructure.Http
 {
     public class PlaylistGateway : IPlaylistGateway
     {
-        private sealed record PlaylistListItemWire(int Id, string Name, string? Description, string? Genre);
+       
+        private sealed record PlaylistListItemWire(
+            int Id,
+            string Name,
+            string? Genre,
+            string? Description,
+            int SongCount);
+
         private sealed record PagedWire<T>(IReadOnlyList<T> Items, int Total, int Page, int PageSize);
         private readonly HttpClient _http;
         public PlaylistGateway(HttpClient http) => _http = http;
@@ -73,21 +80,28 @@ namespace User.Infrastructure.Http
         }
 
         public async Task<PagedResult<ExternalPlaylistListItemDto>> GetExternalPlaylistsAsync(
-         string? genre, int page, int pageSize, CancellationToken ct = default)
+     string? genre, int page, int pageSize, CancellationToken ct = default)
         {
             var g = Uri.EscapeDataString(genre ?? "");
             var uri = $"/playlists?genre={g}&page={page}&pageSize={pageSize}";
 
             var raw = await _http.GetFromJsonAsync<PagedWire<PlaylistListItemWire>>(uri, ct);
             if (raw is null || raw.Items is null)
-                return new PagedResult<ExternalPlaylistListItemDto>(Array.Empty<ExternalPlaylistListItemDto>(), 0, page, pageSize);
+                return new PagedResult<ExternalPlaylistListItemDto>(
+                    Array.Empty<ExternalPlaylistListItemDto>(), 0, page, pageSize);
 
             var items = raw.Items
-                .Select(it => new ExternalPlaylistListItemDto(it.Id, it.Name, it.Description, it.Genre))
+                .Select(it => new ExternalPlaylistListItemDto(
+                    Id: it.Id,
+                    Name: it.Name,
+                    Description: it.Description,
+                    Genre: it.Genre,
+                    SongCount: it.SongCount))
                 .ToList();
 
             return new PagedResult<ExternalPlaylistListItemDto>(items, raw.Total, raw.Page, raw.PageSize);
         }
+
 
         public async Task<Dictionary<int, ExternalSongMetaDto>> GetSongMetadataByIdsAsync(
           IEnumerable<int> ids, CancellationToken ct = default)

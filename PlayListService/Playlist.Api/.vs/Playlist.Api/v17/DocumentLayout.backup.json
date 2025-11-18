@@ -3,41 +3,110 @@
   "WorkspaceRootPath": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26A5E7AB-3C05-4FD0-8ED0-A70331C2A424}|..\\Web\\Web.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\web\\controllers\\songscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\repositories\\songrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\repositories\\playlistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C6F44DD-65C4-4E36-B32D-DA50982AB16B}|..\\Core\\Core.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\core\\entities\\playlistsong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\persistence\\appdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\iservices\\iplaylistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\iservices\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\dtos\\artistaddsongrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\playlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\playlist.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26A5E7AB-3C05-4FD0-8ED0-A70331C2A424}|..\\Web\\Web.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\web\\controllers\\songlikescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\songlikeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\dtos\\pleylistdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\dtos\\playlistsongitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\dtos\\playlistlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{26A5E7AB-3C05-4FD0-8ED0-A70331C2A424}|..\\Web\\Web.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\web\\controllers\\playlistscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\dtos\\playlistsongrefdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A5E7AB-3C05-4FD0-8ED0-A70331C2A424}|..\\Web\\Web.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\web\\controllers\\songlikescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A5E7AB-3C05-4FD0-8ED0-A70331C2A424}|..\\Web\\Web.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\web\\controllers\\songscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A5E7AB-3C05-4FD0-8ED0-A70331C2A424}|..\\Web\\Web.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A5E7AB-3C05-4FD0-8ED0-A70331C2A424}|..\\Web\\Web.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\web\\controllers\\artistscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\repositories\\artistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\songservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\songlikeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\artistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\iservices\\isongservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\dtos\\slimsongdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\iservices\\isonglikeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\iservices\\iartistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\repositories\\songlikerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C6F44DD-65C4-4E36-B32D-DA50982AB16B}|..\\Core\\Core.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\core\\entities\\playlistsong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\playlist.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B83AC26-2B7B-4923-A82C-688868FB9D86}|Playlist.Api.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\playlist.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -53,36 +122,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{26A5E7AB-3C05-4FD0-8ED0-A70331C2A424}|..\\Web\\Web.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\web\\middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26A5E7AB-3C05-4FD0-8ED0-A70331C2A424}|..\\Web\\Web.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\web\\controllers\\playlistscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26A5E7AB-3C05-4FD0-8ED0-A70331C2A424}|..\\Web\\Web.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26A5E7AB-3C05-4FD0-8ED0-A70331C2A424}|..\\Web\\Web.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\web\\controllers\\artistscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\repositories\\songrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\repositories\\songlikerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\repositories\\artistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\persistence\\appdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86CE7ACD-8175-42D6-958B-075E0FDB39BE}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\infrastructure\\caching\\rediscacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -127,18 +166,6 @@
       "AbsoluteMoniker": "D:0:0:{3C6F44DD-65C4-4E36-B32D-DA50982AB16B}|..\\Core\\Core.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\core\\entities\\artist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\services\\artistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\dtos\\votedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -170,9 +197,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\dtos\\songcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\dtos\\slimsongdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\dtos\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -212,9 +236,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\dtos\\artistcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\dtos\\artistaddsongrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20234523-650B-4275-9C29-3B8DFB43C4E0}|..\\Application\\Application.csproj|c:\\users\\gurgen\\source\\repos\\final-project\\playlistservice\\application\\common\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -499,19 +520,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SongsController.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Controllers\\SongsController.cs",
-              "RelativeDocumentMoniker": "..\\Web\\Controllers\\SongsController.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Controllers\\SongsController.cs",
-              "RelativeToolTip": "..\\Web\\Controllers\\SongsController.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAADwv24AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ArtistAddSongRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\ArtistAddSongRequestDto.cs",
+              "RelativeDocumentMoniker": "..\\Application\\DTOs\\ArtistAddSongRequestDto.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\ArtistAddSongRequestDto.cs",
+              "RelativeToolTip": "..\\Application\\DTOs\\ArtistAddSongRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:30:11.945Z",
+              "WhenOpened": "2025-11-15T15:43:40.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\IServices\\IAuthService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Services\\IServices\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\IServices\\IAuthService.cs",
+              "RelativeToolTip": "..\\Application\\Services\\IServices\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T14:48:33.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IPlaylistService.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\IServices\\IPlaylistService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Services\\IServices\\IPlaylistService.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\IServices\\IPlaylistService.cs",
+              "RelativeToolTip": "..\\Application\\Services\\IServices\\IPlaylistService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T11:04:14.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Persistence\\AppDbContextFactory.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Persistence\\AppDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Persistence\\AppDbContextFactory.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Persistence\\AppDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:16:36.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwBAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:17:38.888Z",
               "EditorCaption": ""
             },
             {
@@ -529,72 +602,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Persistence\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Persistence\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Persistence\\AppDbContext.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Persistence\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAHAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "SongRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\SongRepository.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\SongRepository.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\SongRepository.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Repositories\\SongRepository.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAqwDQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:15:31.619Z",
+              "WhenOpened": "2025-11-10T12:18:29.04Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T16:01:18.206Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IPlaylistService.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\IServices\\IPlaylistService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Services\\IServices\\IPlaylistService.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\IServices\\IPlaylistService.cs",
-              "RelativeToolTip": "..\\Application\\Services\\IServices\\IPlaylistService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T11:04:14.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "PlaylistService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\PlaylistService.cs",
               "RelativeDocumentMoniker": "..\\Application\\Services\\PlaylistService.cs",
               "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\PlaylistService.cs",
               "RelativeToolTip": "..\\Application\\Services\\PlaylistService.cs",
-              "ViewState": "AgIAAMcAAAAAAAAAAAAcwNwAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAANsAAAAAAAAAAAAAAO8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T11:15:25.109Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlaylistSong.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\PlaylistSong.cs",
-              "RelativeDocumentMoniker": "..\\Core\\Entities\\PlaylistSong.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\PlaylistSong.cs",
-              "RelativeToolTip": "..\\Core\\Entities\\PlaylistSong.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAADAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "PleylistDetailsDto.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\PleylistDetailsDto.cs",
+              "RelativeDocumentMoniker": "..\\Application\\DTOs\\PleylistDetailsDto.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\PleylistDetailsDto.cs",
+              "RelativeToolTip": "..\\Application\\DTOs\\PleylistDetailsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:13:04.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-15T15:44:56.971Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "SongLikesController.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Controllers\\SongLikesController.cs",
               "RelativeDocumentMoniker": "..\\Web\\Controllers\\SongLikesController.cs",
@@ -602,34 +648,43 @@
               "RelativeToolTip": "..\\Web\\Controllers\\SongLikesController.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAgwDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T09:54:18.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-09T09:54:18.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SongLikeService.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\SongLikeService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Services\\SongLikeService.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\SongLikeService.cs",
-              "RelativeToolTip": "..\\Application\\Services\\SongLikeService.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAUwG0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "PlaylistsController.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Controllers\\PlaylistsController.cs",
+              "RelativeDocumentMoniker": "..\\Web\\Controllers\\PlaylistsController.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Controllers\\PlaylistsController.cs",
+              "RelativeToolTip": "..\\Web\\Controllers\\PlaylistsController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAIwF4AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T09:55:25.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-09T09:37:25.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PlaylistSongRefDto.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\PlaylistSongRefDto.cs",
+              "RelativeDocumentMoniker": "..\\Application\\DTOs\\PlaylistSongRefDto.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\PlaylistSongRefDto.cs",
+              "RelativeToolTip": "..\\Application\\DTOs\\PlaylistSongRefDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T17:32:05.736Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "PleylistDetailsDto.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\PleylistDetailsDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\PleylistDetailsDto.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\PleylistDetailsDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\PleylistDetailsDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
+              "Title": "PlaylistSongItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\PlaylistSongItemDto.cs",
+              "RelativeDocumentMoniker": "..\\Application\\DTOs\\PlaylistSongItemDto.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\PlaylistSongItemDto.cs",
+              "RelativeToolTip": "..\\Application\\DTOs\\PlaylistSongItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T15:44:56.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T17:50:45.461Z"
             },
             {
               "$type": "Document",
@@ -639,87 +694,25 @@
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\PlaylistListItemDto.cs",
               "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\PlaylistListItemDto.cs",
               "RelativeToolTip": "..\\Application\\DTOs\\PlaylistListItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T15:44:47.13Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SongService.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\SongService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Services\\SongService.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\SongService.cs",
-              "RelativeToolTip": "..\\Application\\Services\\SongService.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAuwJIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T15:07:27.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ExceptionHandlingMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Middleware\\ExceptionHandlingMiddleware.cs",
-              "RelativeDocumentMoniker": "..\\Web\\Middleware\\ExceptionHandlingMiddleware.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Middleware\\ExceptionHandlingMiddleware.cs",
-              "RelativeToolTip": "..\\Web\\Middleware\\ExceptionHandlingMiddleware.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAuwEoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:20:51.527Z"
+              "WhenOpened": "2025-11-15T15:44:47.13Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Dockerfile",
-              "RelativeDocumentMoniker": "Dockerfile",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Dockerfile",
-              "RelativeToolTip": "Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-08T15:33:32.44Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": ".dockerignore",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\.dockerignore",
-              "RelativeDocumentMoniker": ".dockerignore",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\.dockerignore",
-              "RelativeToolTip": ".dockerignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-08T15:36:01.742Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-03T17:26:29.384Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "PlaylistsController.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Controllers\\PlaylistsController.cs",
-              "RelativeDocumentMoniker": "..\\Web\\Controllers\\PlaylistsController.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Controllers\\PlaylistsController.cs",
-              "RelativeToolTip": "..\\Web\\Controllers\\PlaylistsController.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAmwHIAAAAAAAAAAAAAAA==",
+              "Title": "SongsController.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Controllers\\SongsController.cs",
+              "RelativeDocumentMoniker": "..\\Web\\Controllers\\SongsController.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Controllers\\SongsController.cs",
+              "RelativeToolTip": "..\\Web\\Controllers\\SongsController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwFgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T09:37:25.682Z"
+              "WhenOpened": "2025-11-10T11:30:11.945Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "..\\Web\\Controllers\\AuthController.cs",
@@ -731,307 +724,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 16,
               "Title": "ArtistsController.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Controllers\\ArtistsController.cs",
               "RelativeDocumentMoniker": "..\\Web\\Controllers\\ArtistsController.cs",
               "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Controllers\\ArtistsController.cs",
               "RelativeToolTip": "..\\Web\\Controllers\\ArtistsController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAmwFQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T09:37:01.444Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:18:42.621Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\UnitOfWork.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\UnitOfWork.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Repositories\\UnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:18:37.641Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "SongRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\SongRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\SongRepository.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\SongRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Repositories\\SongRepository.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAqwD4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:18:29.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "SongLikeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\SongLikeRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\SongLikeRepository.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\SongLikeRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Repositories\\SongLikeRepository.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAqwDoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T09:54:52.521Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Repositories\\GenericRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAUwC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:17:38.888Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 17,
               "Title": "ArtistRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\ArtistRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\ArtistRepository.cs",
               "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\ArtistRepository.cs",
               "RelativeToolTip": "..\\Infrastructure\\Repositories\\ArtistRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T12:17:24.922Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "AppDbContextFactory.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Persistence\\AppDbContextFactory.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Persistence\\AppDbContextFactory.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Persistence\\AppDbContextFactory.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Persistence\\AppDbContextFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAIwBMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:16:36.433Z"
+              "WhenOpened": "2025-11-10T12:15:31.619Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "RedisCacheService.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Caching\\RedisCacheService.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Caching\\RedisCacheService.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Caching\\RedisCacheService.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Caching\\RedisCacheService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAqwDwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:15:44.762Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "..\\Core\\Interfaces\\Repositories\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IUserRepository.cs",
-              "RelativeToolTip": "..\\Core\\Interfaces\\Repositories\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:14:53.573Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "..\\Core\\Interfaces\\Repositories\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IUnitOfWork.cs",
-              "RelativeToolTip": "..\\Core\\Interfaces\\Repositories\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:14:48.961Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ISongRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\ISongRepository.cs",
-              "RelativeDocumentMoniker": "..\\Core\\Interfaces\\Repositories\\ISongRepository.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\ISongRepository.cs",
-              "RelativeToolTip": "..\\Core\\Interfaces\\Repositories\\ISongRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:14:40.764Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ISongLikeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\ISongLikeRepository.cs",
-              "RelativeDocumentMoniker": "..\\Core\\Interfaces\\Repositories\\ISongLikeRepository.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\ISongLikeRepository.cs",
-              "RelativeToolTip": "..\\Core\\Interfaces\\Repositories\\ISongLikeRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:14:38.017Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "IPlaylistRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IPlaylistRepository.cs",
-              "RelativeDocumentMoniker": "..\\Core\\Interfaces\\Repositories\\IPlaylistRepository.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IPlaylistRepository.cs",
-              "RelativeToolTip": "..\\Core\\Interfaces\\Repositories\\IPlaylistRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:14:22.046Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "..\\Core\\Interfaces\\Repositories\\IGenericRepository.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IGenericRepository.cs",
-              "RelativeToolTip": "..\\Core\\Interfaces\\Repositories\\IGenericRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:14:16.556Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "IArtistRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IArtistRepository.cs",
-              "RelativeDocumentMoniker": "..\\Core\\Interfaces\\Repositories\\IArtistRepository.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IArtistRepository.cs",
-              "RelativeToolTip": "..\\Core\\Interfaces\\Repositories\\IArtistRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:14:04.19Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "..\\Core\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\User.cs",
-              "RelativeToolTip": "..\\Core\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:13:57.244Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "SongMetadata.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\SongMetadata.cs",
-              "RelativeDocumentMoniker": "..\\Core\\Entities\\SongMetadata.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\SongMetadata.cs",
-              "RelativeToolTip": "..\\Core\\Entities\\SongMetadata.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:13:55.11Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "SongLike.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\SongLike.cs",
-              "RelativeDocumentMoniker": "..\\Core\\Entities\\SongLike.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\SongLike.cs",
-              "RelativeToolTip": "..\\Core\\Entities\\SongLike.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:13:31.397Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Song.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\Song.cs",
-              "RelativeDocumentMoniker": "..\\Core\\Entities\\Song.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\Song.cs",
-              "RelativeToolTip": "..\\Core\\Entities\\Song.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:13:21.723Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Playlist.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\Playlist.cs",
-              "RelativeDocumentMoniker": "..\\Core\\Entities\\Playlist.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\Playlist.cs",
-              "RelativeToolTip": "..\\Core\\Entities\\Playlist.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:13:02.588Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Artist.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\Artist.cs",
-              "RelativeDocumentMoniker": "..\\Core\\Entities\\Artist.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\Artist.cs",
-              "RelativeToolTip": "..\\Core\\Entities\\Artist.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:12:55.295Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 19,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "..\\Application\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\UserService.cs",
               "RelativeToolTip": "..\\Application\\Services\\UserService.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAwHEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAIwDcAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T10:41:42.602Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 20,
+              "Title": "SongService.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\SongService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Services\\SongService.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\SongService.cs",
+              "RelativeToolTip": "..\\Application\\Services\\SongService.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAqwFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T15:07:27.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SongLikeService.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\SongLikeService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Services\\SongLikeService.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\SongLikeService.cs",
+              "RelativeToolTip": "..\\Application\\Services\\SongLikeService.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAcwG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T09:55:25.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "..\\Application\\Services\\AuthService.cs",
               "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\AuthService.cs",
               "RelativeToolTip": "..\\Application\\Services\\AuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T10:39:14.397Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 23,
               "Title": "ArtistService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\ArtistService.cs",
               "RelativeDocumentMoniker": "..\\Application\\Services\\ArtistService.cs",
               "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\ArtistService.cs",
               "RelativeToolTip": "..\\Application\\Services\\ArtistService.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAuwKMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAswIcAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T12:09:50.966Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 24,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Mapping\\MappingProfile.cs",
               "RelativeDocumentMoniker": "..\\Application\\Mapping\\MappingProfile.cs",
@@ -1043,7 +832,343 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ISongService.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\IServices\\ISongService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Services\\IServices\\ISongService.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\IServices\\ISongService.cs",
+              "RelativeToolTip": "..\\Application\\Services\\IServices\\ISongService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T14:48:50.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\IServices\\IUserService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Services\\IServices\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\IServices\\IUserService.cs",
+              "RelativeToolTip": "..\\Application\\Services\\IServices\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T14:49:05.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ISongLikeService.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\IServices\\ISongLikeService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Services\\IServices\\ISongLikeService.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\IServices\\ISongLikeService.cs",
+              "RelativeToolTip": "..\\Application\\Services\\IServices\\ISongLikeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T14:48:48.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IArtistService.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\IServices\\IArtistService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Services\\IServices\\IArtistService.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Services\\IServices\\IArtistService.cs",
+              "RelativeToolTip": "..\\Application\\Services\\IServices\\IArtistService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T14:48:26.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:18:42.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:18:37.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SlimSongDto.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\SlimSongDto.cs",
+              "RelativeDocumentMoniker": "..\\Application\\DTOs\\SlimSongDto.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\SlimSongDto.cs",
+              "RelativeToolTip": "..\\Application\\DTOs\\SlimSongDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T15:45:10.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "SongLikeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\SongLikeRepository.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\SongLikeRepository.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Repositories\\SongLikeRepository.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Repositories\\SongLikeRepository.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAqwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T09:54:52.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "PlaylistSong.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\PlaylistSong.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Entities\\PlaylistSong.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\PlaylistSong.cs",
+              "RelativeToolTip": "..\\Core\\Entities\\PlaylistSong.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:13:04.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T16:01:18.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "..\\Web\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Web\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "..\\Web\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAuwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:20:51.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-08T15:33:32.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": ".dockerignore",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\.dockerignore",
+              "RelativeDocumentMoniker": ".dockerignore",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\.dockerignore",
+              "RelativeToolTip": ".dockerignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-08T15:36:01.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-03T17:26:29.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "RedisCacheService.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Caching\\RedisCacheService.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Caching\\RedisCacheService.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Caching\\RedisCacheService.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Caching\\RedisCacheService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAqwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T11:15:44.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Interfaces\\Repositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "..\\Core\\Interfaces\\Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:14:53.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Interfaces\\Repositories\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IUnitOfWork.cs",
+              "RelativeToolTip": "..\\Core\\Interfaces\\Repositories\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:14:48.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ISongRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\ISongRepository.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Interfaces\\Repositories\\ISongRepository.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\ISongRepository.cs",
+              "RelativeToolTip": "..\\Core\\Interfaces\\Repositories\\ISongRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:14:40.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ISongLikeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\ISongLikeRepository.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Interfaces\\Repositories\\ISongLikeRepository.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\ISongLikeRepository.cs",
+              "RelativeToolTip": "..\\Core\\Interfaces\\Repositories\\ISongLikeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:14:38.017Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 44,
+              "Title": "IPlaylistRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IPlaylistRepository.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Interfaces\\Repositories\\IPlaylistRepository.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IPlaylistRepository.cs",
+              "RelativeToolTip": "..\\Core\\Interfaces\\Repositories\\IPlaylistRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:14:22.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "RelativeToolTip": "..\\Core\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:14:16.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "IArtistRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IArtistRepository.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Interfaces\\Repositories\\IArtistRepository.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Interfaces\\Repositories\\IArtistRepository.cs",
+              "RelativeToolTip": "..\\Core\\Interfaces\\Repositories\\IArtistRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:14:04.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\User.cs",
+              "RelativeToolTip": "..\\Core\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:13:57.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "SongMetadata.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\SongMetadata.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Entities\\SongMetadata.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\SongMetadata.cs",
+              "RelativeToolTip": "..\\Core\\Entities\\SongMetadata.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:13:55.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "SongLike.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\SongLike.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Entities\\SongLike.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\SongLike.cs",
+              "RelativeToolTip": "..\\Core\\Entities\\SongLike.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:13:31.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Song.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\Song.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Entities\\Song.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\Song.cs",
+              "RelativeToolTip": "..\\Core\\Entities\\Song.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:13:21.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Playlist.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\Playlist.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Entities\\Playlist.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\Playlist.cs",
+              "RelativeToolTip": "..\\Core\\Entities\\Playlist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:13:02.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Artist.cs",
+              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\Artist.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Entities\\Artist.cs",
+              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Core\\Entities\\Artist.cs",
+              "RelativeToolTip": "..\\Core\\Entities\\Artist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:12:55.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
               "Title": "VoteDtos.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\VoteDtos.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\VoteDtos.cs",
@@ -1055,7 +1180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 54,
               "Title": "UserUpdateDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\UserUpdateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\UserUpdateDto.cs",
@@ -1067,7 +1192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 55,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\UserDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\UserDto.cs",
@@ -1079,7 +1204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 56,
               "Title": "SongUpdateDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\SongUpdateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\SongUpdateDto.cs",
@@ -1091,7 +1216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 57,
               "Title": "SongsWithLikesDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\SongsWithLikesDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\SongsWithLikesDto.cs",
@@ -1103,7 +1228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 58,
               "Title": "SongRefDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\SongRefDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\SongRefDto.cs",
@@ -1115,7 +1240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 59,
               "Title": "SongPlaylistRefDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\SongPlaylistRefDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\SongPlaylistRefDto.cs",
@@ -1127,7 +1252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 60,
               "Title": "SongMetaDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\SongMetaDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\SongMetaDto.cs",
@@ -1139,7 +1264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 62,
               "Title": "SongDetailsDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\SongDetailsDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\SongDetailsDto.cs",
@@ -1151,7 +1276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 61,
               "Title": "SongDtos.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\SongDtos.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\SongDtos.cs",
@@ -1163,7 +1288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 63,
               "Title": "SongCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\SongCreateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\SongCreateDto.cs",
@@ -1175,19 +1300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "SlimSongDto.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\SlimSongDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\SlimSongDto.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\SlimSongDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\SlimSongDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T15:45:10.263Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 64,
               "Title": "RegisterRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\RegisterRequestDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\RegisterRequestDto.cs",
@@ -1199,7 +1312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 65,
               "Title": "PlaylistRecorderDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\PlaylistRecorderDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\PlaylistRecorderDto.cs",
@@ -1211,7 +1324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 66,
               "Title": "PlaylistDtos.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\PlaylistDtos.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\PlaylistDtos.cs",
@@ -1223,7 +1336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 67,
               "Title": "PlaylistCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\PlaylistCreateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\PlaylistCreateDto.cs",
@@ -1235,7 +1348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 68,
               "Title": "PlaylistAddSongsDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\PlaylistAddSongsDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\PlaylistAddSongsDto.cs",
@@ -1247,7 +1360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 69,
               "Title": "PlaylistAddSongDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\PlaylistAddSongDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\PlaylistAddSongDto.cs",
@@ -1259,7 +1372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 70,
               "Title": "LoginRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\LoginRequestDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\LoginRequestDto.cs",
@@ -1271,7 +1384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 71,
               "Title": "AuthTokenDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\AuthTokenDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\AuthTokenDto.cs",
@@ -1283,7 +1396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 72,
               "Title": "ArtistWithSongsListItemDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\ArtistWithSongsListItemDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\ArtistWithSongsListItemDto.cs",
@@ -1295,7 +1408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 73,
               "Title": "ArtistUpdateDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\ArtistUpdateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\ArtistUpdateDto.cs",
@@ -1307,7 +1420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 74,
               "Title": "ArtistDtos.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\ArtistDtos.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\ArtistDtos.cs",
@@ -1319,7 +1432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 75,
               "Title": "ArtistDetailsDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\ArtistDetailsDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\ArtistDetailsDto.cs",
@@ -1331,7 +1444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 76,
               "Title": "ArtistCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\ArtistCreateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\ArtistCreateDto.cs",
@@ -1343,19 +1456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "ArtistAddSongRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\ArtistAddSongRequestDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\ArtistAddSongRequestDto.cs",
-              "ToolTip": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\DTOs\\ArtistAddSongRequestDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\ArtistAddSongRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T15:43:40.293Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 78,
               "Title": "DomainsExeption.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Common\\Errors\\DomainsExeption.cs",
               "RelativeDocumentMoniker": "..\\Application\\Common\\Errors\\DomainsExeption.cs",
@@ -1367,7 +1468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 77,
               "Title": "PagedResult.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Application\\Common\\PagedResult.cs",
               "RelativeDocumentMoniker": "..\\Application\\Common\\PagedResult.cs",
@@ -1379,7 +1480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 79,
               "Title": "PasswordHasher.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Security\\PasswordHasher.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Security\\PasswordHasher.cs",
@@ -1391,7 +1492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 80,
               "Title": "JwtTokenService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Security\\JwtTokenService.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Security\\JwtTokenService.cs",
@@ -1403,7 +1504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 81,
               "Title": "JwtOptions.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Infrastructure\\Security\\JwtOptions.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Security\\JwtOptions.cs",
@@ -1415,7 +1516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 82,
               "Title": "Playlist.Api.csproj",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Playlist.Api.csproj",
               "RelativeDocumentMoniker": "Playlist.Api.csproj",
@@ -1427,7 +1528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 88,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Mapping\\MappingProfile.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Mapping\\MappingProfile.cs",
@@ -1439,7 +1540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 89,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Interfaces\\Repositories\\IUserRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Interfaces\\Repositories\\IUserRepository.cs",
@@ -1451,7 +1552,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 90,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Repositories\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Repositories\\UnitOfWork.cs",
@@ -1463,7 +1564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 87,
               "Title": "Application.csproj",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Application.csproj",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Application.csproj",
@@ -1475,7 +1576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 86,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Interfaces\\Repositories\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Interfaces\\Repositories\\IUnitOfWork.cs",
@@ -1487,7 +1588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 91,
               "Title": "ArtistRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Repositories\\ArtistRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Repositories\\ArtistRepository.cs",
@@ -1499,7 +1600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 83,
               "Title": "SongService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Services\\SongService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Services\\SongService.cs",
@@ -1511,7 +1612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 92,
               "Title": "Web.csproj",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Web\\Web.csproj",
               "RelativeDocumentMoniker": "..\\..\\..\\Web\\Web.csproj",
@@ -1523,7 +1624,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 93,
               "Title": "LoginRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\LoginRequestDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\LoginRequestDto.cs",
@@ -1535,7 +1636,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 84,
               "Title": "Playlist.Api",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Final-Project\\PlayListService\\Playlist.Api\\Playlist.Api.csproj",
               "RelativeDocumentMoniker": "Playlist.Api.csproj",
@@ -1546,7 +1647,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 94,
               "Title": "SongLike.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Entities\\SongLike.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Entities\\SongLike.cs",
@@ -1558,7 +1659,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 95,
               "Title": "Song.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Entities\\Song.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Entities\\Song.cs",
@@ -1570,7 +1671,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 96,
               "Title": "SongLikesController.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Web\\Controllers\\SongLikesController.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Web\\Controllers\\SongLikesController.cs",
@@ -1582,7 +1683,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 97,
               "Title": "ExceptionHandlingMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Web\\Middleware\\ExceptionHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Web\\Middleware\\ExceptionHandlingMiddleware.cs",
@@ -1594,7 +1695,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 98,
               "Title": "SongsController.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Web\\Controllers\\SongsController.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Web\\Controllers\\SongsController.cs",
@@ -1606,7 +1707,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 99,
               "Title": "PlaylistsController.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Web\\Controllers\\PlaylistsController.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Web\\Controllers\\PlaylistsController.cs",
@@ -1618,7 +1719,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 100,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Web\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Web\\Controllers\\AuthController.cs",
@@ -1630,7 +1731,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 101,
               "Title": "ArtistsController.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Web\\Controllers\\ArtistsController.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Web\\Controllers\\ArtistsController.cs",
@@ -1642,7 +1743,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 102,
               "Title": "PasswordHasher.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Security\\PasswordHasher.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Security\\PasswordHasher.cs",
@@ -1654,7 +1755,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 103,
               "Title": "JwtTokenService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Security\\JwtTokenService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Security\\JwtTokenService.cs",
@@ -1666,7 +1767,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 104,
               "Title": "JwtOptions.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Security\\JwtOptions.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Security\\JwtOptions.cs",
@@ -1678,7 +1779,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 105,
               "Title": "VoteRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Repositories\\VoteRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Repositories\\VoteRepository.cs",
@@ -1690,7 +1791,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 106,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Repositories\\UserRepository.cs",
@@ -1702,7 +1803,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 107,
               "Title": "SongRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Repositories\\SongRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Repositories\\SongRepository.cs",
@@ -1714,7 +1815,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 108,
               "Title": "SongLikeRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Repositories\\SongLikeRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Repositories\\SongLikeRepository.cs",
@@ -1726,7 +1827,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 109,
               "Title": "PlaylistRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Repositories\\PlaylistRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Repositories\\PlaylistRepository.cs",
@@ -1738,7 +1839,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 110,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Repositories\\GenericRepository.cs",
@@ -1750,7 +1851,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 111,
               "Title": "AppDbContextFactory.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Persistence\\AppDbContextFactory.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Persistence\\AppDbContextFactory.cs",
@@ -1762,7 +1863,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 112,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Persistence\\AppDbContext.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Persistence\\AppDbContext.cs",
@@ -1774,7 +1875,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 113,
               "Title": "RedisCacheService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Caching\\RedisCacheService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Caching\\RedisCacheService.cs",
@@ -1786,7 +1887,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 114,
               "Title": "IVoteRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Interfaces\\Repositories\\IVoteRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Interfaces\\Repositories\\IVoteRepository.cs",
@@ -1798,7 +1899,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 115,
               "Title": "ISongRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Interfaces\\Repositories\\ISongRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Interfaces\\Repositories\\ISongRepository.cs",
@@ -1810,7 +1911,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 116,
               "Title": "ISongLikeRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Interfaces\\Repositories\\ISongLikeRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Interfaces\\Repositories\\ISongLikeRepository.cs",
@@ -1822,7 +1923,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 117,
               "Title": "IPlaylistRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Interfaces\\Repositories\\IPlaylistRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Interfaces\\Repositories\\IPlaylistRepository.cs",
@@ -1834,7 +1935,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 118,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Interfaces\\Repositories\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Interfaces\\Repositories\\IGenericRepository.cs",
@@ -1846,7 +1947,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 119,
               "Title": "IArtistRepository.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Interfaces\\Repositories\\IArtistRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Interfaces\\Repositories\\IArtistRepository.cs",
@@ -1858,7 +1959,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 120,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Entities\\User.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Entities\\User.cs",
@@ -1870,7 +1971,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 121,
               "Title": "SongMetadata.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Entities\\SongMetadata.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Entities\\SongMetadata.cs",
@@ -1882,7 +1983,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 122,
               "Title": "PlaylistSongVote.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Entities\\PlaylistSongVote.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Entities\\PlaylistSongVote.cs",
@@ -1894,7 +1995,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 123,
               "Title": "PlaylistSong.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Entities\\PlaylistSong.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Entities\\PlaylistSong.cs",
@@ -1906,7 +2007,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 124,
               "Title": "Playlist.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Entities\\Playlist.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Entities\\Playlist.cs",
@@ -1918,7 +2019,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 125,
               "Title": "Artist.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Entities\\Artist.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Entities\\Artist.cs",
@@ -1930,7 +2031,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 126,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Services\\UserService.cs",
@@ -1942,7 +2043,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
+              "DocumentIndex": 127,
               "Title": "SongLikeService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Services\\SongLikeService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Services\\SongLikeService.cs",
@@ -1954,7 +2055,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 128,
               "Title": "PlaylistService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Services\\PlaylistService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Services\\PlaylistService.cs",
@@ -1966,7 +2067,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 129,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Services\\AuthService.cs",
@@ -1978,7 +2079,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 130,
               "Title": "ArtistService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Services\\ArtistService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Services\\ArtistService.cs",
@@ -1990,7 +2091,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 131,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Services\\IServices\\IUserService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Services\\IServices\\IUserService.cs",
@@ -2002,7 +2103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 132,
               "Title": "ISongService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Services\\IServices\\ISongService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Services\\IServices\\ISongService.cs",
@@ -2014,7 +2115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 133,
               "Title": "ISongLikeService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Services\\IServices\\ISongLikeService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Services\\IServices\\ISongLikeService.cs",
@@ -2026,7 +2127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 127,
+              "DocumentIndex": 134,
               "Title": "IPlaylistService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Services\\IServices\\IPlaylistService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Services\\IServices\\IPlaylistService.cs",
@@ -2038,7 +2139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 128,
+              "DocumentIndex": 135,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Services\\IServices\\IAuthService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Services\\IServices\\IAuthService.cs",
@@ -2050,7 +2151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 129,
+              "DocumentIndex": 136,
               "Title": "IArtistService.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Services\\IServices\\IArtistService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Services\\IServices\\IArtistService.cs",
@@ -2062,7 +2163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 130,
+              "DocumentIndex": 137,
               "Title": "VoteDtos.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\VoteDtos.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\VoteDtos.cs",
@@ -2074,7 +2175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 131,
+              "DocumentIndex": 138,
               "Title": "UserUpdateDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\UserUpdateDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\UserUpdateDto.cs",
@@ -2086,7 +2187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 132,
+              "DocumentIndex": 139,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\UserDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\UserDto.cs",
@@ -2098,7 +2199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 133,
+              "DocumentIndex": 140,
               "Title": "SongUpdateDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\SongUpdateDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\SongUpdateDto.cs",
@@ -2110,7 +2211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 134,
+              "DocumentIndex": 141,
               "Title": "SongsWithLikesDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\SongsWithLikesDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\SongsWithLikesDto.cs",
@@ -2122,7 +2223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 135,
+              "DocumentIndex": 142,
               "Title": "SongRefDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\SongRefDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\SongRefDto.cs",
@@ -2134,7 +2235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 136,
+              "DocumentIndex": 143,
               "Title": "SongPlaylistRefDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\SongPlaylistRefDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\SongPlaylistRefDto.cs",
@@ -2146,7 +2247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 137,
+              "DocumentIndex": 144,
               "Title": "SongMetaDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\SongMetaDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\SongMetaDto.cs",
@@ -2158,7 +2259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 138,
+              "DocumentIndex": 145,
               "Title": "SongDtos.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\SongDtos.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\SongDtos.cs",
@@ -2170,7 +2271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 139,
+              "DocumentIndex": 146,
               "Title": "SongDetailsDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\SongDetailsDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\SongDetailsDto.cs",
@@ -2182,7 +2283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 140,
+              "DocumentIndex": 147,
               "Title": "SongCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\SongCreateDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\SongCreateDto.cs",
@@ -2194,7 +2295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 141,
+              "DocumentIndex": 148,
               "Title": "SlimSongDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\SlimSongDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\SlimSongDto.cs",
@@ -2206,7 +2307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 142,
+              "DocumentIndex": 149,
               "Title": "RegisterRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\RegisterRequestDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\RegisterRequestDto.cs",
@@ -2218,7 +2319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 143,
+              "DocumentIndex": 150,
               "Title": "PleylistDetailsDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\PleylistDetailsDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\PleylistDetailsDto.cs",
@@ -2230,7 +2331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 144,
+              "DocumentIndex": 151,
               "Title": "PlaylistRecorderDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\PlaylistRecorderDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\PlaylistRecorderDto.cs",
@@ -2242,7 +2343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 145,
+              "DocumentIndex": 152,
               "Title": "PlaylistListItemDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\PlaylistListItemDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\PlaylistListItemDto.cs",
@@ -2254,7 +2355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 146,
+              "DocumentIndex": 153,
               "Title": "PlaylistDtos.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\PlaylistDtos.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\PlaylistDtos.cs",
@@ -2266,7 +2367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 147,
+              "DocumentIndex": 154,
               "Title": "PlaylistCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\PlaylistCreateDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\PlaylistCreateDto.cs",
@@ -2278,7 +2379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 148,
+              "DocumentIndex": 155,
               "Title": "PlaylistAddSongsDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\PlaylistAddSongsDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\PlaylistAddSongsDto.cs",
@@ -2290,7 +2391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 149,
+              "DocumentIndex": 156,
               "Title": "PlaylistAddSongDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\PlaylistAddSongDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\PlaylistAddSongDto.cs",
@@ -2302,7 +2403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 150,
+              "DocumentIndex": 157,
               "Title": "AuthTokenDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\AuthTokenDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\AuthTokenDto.cs",
@@ -2314,7 +2415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 151,
+              "DocumentIndex": 158,
               "Title": "ArtistWithSongsListItemDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\ArtistWithSongsListItemDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\ArtistWithSongsListItemDto.cs",
@@ -2326,7 +2427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 152,
+              "DocumentIndex": 159,
               "Title": "ArtistUpdateDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\ArtistUpdateDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\ArtistUpdateDto.cs",
@@ -2338,7 +2439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 153,
+              "DocumentIndex": 160,
               "Title": "ArtistDtos.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\ArtistDtos.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\ArtistDtos.cs",
@@ -2350,7 +2451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 154,
+              "DocumentIndex": 161,
               "Title": "ArtistDetailsDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\ArtistDetailsDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\ArtistDetailsDto.cs",
@@ -2362,7 +2463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 155,
+              "DocumentIndex": 162,
               "Title": "ArtistCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\ArtistCreateDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\ArtistCreateDto.cs",
@@ -2374,7 +2475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 156,
+              "DocumentIndex": 163,
               "Title": "ArtistAddSongRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\DTOs\\ArtistAddSongRequestDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\DTOs\\ArtistAddSongRequestDto.cs",
@@ -2386,7 +2487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 157,
+              "DocumentIndex": 164,
               "Title": "PagedResult.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Common\\PagedResult.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Common\\PagedResult.cs",
@@ -2398,7 +2499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 158,
+              "DocumentIndex": 165,
               "Title": "DomainsExeption.cs",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Application\\Common\\Errors\\DomainsExeption.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Application\\Common\\Errors\\DomainsExeption.cs",
@@ -2410,7 +2511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 85,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -2422,7 +2523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 159,
+              "DocumentIndex": 166,
               "Title": "Core.csproj",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Core\\Core.csproj",
               "RelativeDocumentMoniker": "..\\..\\..\\Core\\Core.csproj",
@@ -2434,7 +2535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 160,
+              "DocumentIndex": 167,
               "Title": "Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\Gurgen\\source\\repos\\Infrastructure\\Infrastructure.csproj",
               "RelativeDocumentMoniker": "..\\..\\..\\Infrastructure\\Infrastructure.csproj",
@@ -2443,6 +2544,10 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-11-03T16:32:46.154Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

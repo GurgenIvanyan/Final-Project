@@ -10,6 +10,7 @@ namespace User.Shared.DTO
        int Id,
        string Name,
        string? Description,
-       string? Genre
+       string? Genre,
+        int SongCount
    );
 }

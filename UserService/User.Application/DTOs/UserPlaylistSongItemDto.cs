@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace User.Application.DTOs
 {
     public record UserPlaylistSongItemDto(
+        int SongId,
        string Title,
         int Order
     );

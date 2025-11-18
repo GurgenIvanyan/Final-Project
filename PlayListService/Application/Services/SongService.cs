@@ -90,7 +90,6 @@ public class SongService : ISongService
             await _songs.UpdateAsync(song, ct);
         }, ct);
 
-        // Инвалидация кэша — песня изменилась
         await _cache.RemoveAsync(SongKey(song.Id), ct);
 
         var full = await _songs.GetFullAsync(song.Id, ct) ?? song;

@@ -133,7 +133,7 @@ namespace Playlist.Api.Application.Services
    
         public async Task AddSongAsync(int artistId, int songId, CancellationToken ct = default)
         {
-            // chek exist artist and song
+           
             var artist = await _artists.GetByIdAsync(artistId, ct)
                          ?? throw new KeyNotFoundException("Artist not found.");
             var song = await _songs.GetByIdAsync(songId, ct)

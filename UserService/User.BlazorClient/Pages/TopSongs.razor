@@ -1,0 +1,205 @@
+﻿@page "/top-songs"
+@using System
+@using User.BlazorClient.Services
+@inject UserApiClient Api
+@inject AuthState Auth
+@inject NavigationManager Nav
+@inject IJSRuntime JS
+
+<div class="top-songs-page">
+
+    @* NOW PLAYING OVERLAY (verevi aj koxmum) *@
+    @if (_showNowPlaying && !string.IsNullOrWhiteSpace(_nowPlayingTitle))
+    {
+        <div class="now-playing-toast is-visible">
+            <div class="now-playing-disc">
+                <div class="now-playing-disc-center"></div>
+            </div>
+
+            <div class="now-playing-text">
+                <div class="now-playing-label">Now playing</div>
+                <div class="now-playing-title">@_nowPlayingTitle</div>
+            </div>
+
+            <div class="now-playing-eq">
+                <span class="eq-bar bar1"></span>
+                <span class="eq-bar bar2"></span>
+                <span class="eq-bar bar3"></span>
+            </div>
+        </div>
+    }
+
+    <h1 class="top-songs-title">Top liked songs</h1>
+
+    <div class="top-songs-filter">
+        <div class="mb-3" style="max-width: 200px;">
+            <label class="form-label">Min likes</label>
+            <input type="number"
+                   class="form-control"
+                   @bind="MinLikes" />
+        </div>
+
+        <button class="btn btn-primary mb-3" @onclick="LoadAsync">Reload</button>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Error))
+    {
+        <div class="alert alert-danger mt-2">@Error</div>
+    }
+    else if (_loading)
+    {
+        <p>Loading...</p>
+    }
+    else if (_items is null || _items.Count == 0)
+    {
+        <p>No songs.</p>
+    }
+    else
+    {
+        <table class="top-songs-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Genre</th>
+                    <th>Likes</th>
+                    <th class="top-songs-actions-col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var s in _items)
+                {
+                    <tr class="top-song-row"
+                        @onclick="() => OnSongRowClickAsync(s)">
+                        <td>@s.Id</td>
+                        <td>@s.Title</td>
+                        <td>@s.ArtistName</td>
+                        <td>@s.Genre</td>
+                        <td>@s.Likes</td>
+                        <td>
+                            @if (Auth.IsAuthenticated)
+                            {
+                                <button class="btn-like-heart me-2"
+                                        @onclick:stopPropagation="true"
+                                        @onclick="() => OnLikeAsync(s.Id)">
+                                    <span class="heart-icon">&#10084;</span>
+                                </button>
+
+                                <button class="btn-dislike"
+                                        @onclick:stopPropagation="true"
+                                        @onclick="() => OnUnlikeAsync(s.Id)">
+                                    <span class="dislike-icon">&#128078;</span>
+                                </button>
+                            }
+                            else
+                            {
+                                <span class="top-songs-login-hint">
+                                    Login to like
+                                </span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+@code
+{
+    private int MinLikes { get; set; } = 3;
+    private bool _loading;
+    private string? Error;
+    private IReadOnlyList<SongWithLikesDto>? _items;
+
+    // overlay-ի state
+    private bool _showNowPlaying;
+    private string? _nowPlayingTitle;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Auth.IsAuthenticated)
+            await LoadAsync();
+    }
+
+    private async Task LoadAsync()
+    {
+        Error = null;
+        _loading = true;
+        StateHasChanged();
+
+        var (page, err) = await Api.GetTopLikedSongsAsync(MinLikes, 1, 50);
+        Error = err;
+        _items = page?.Items ?? Array.Empty<SongWithLikesDto>();
+
+        _loading = false;
+        StateHasChanged();
+    }
+
+    private async Task OnLikeAsync(int songId)
+    {
+        Error = null;
+        var (score, err) = await Api.LikeSongAsync(songId);
+        if (err is not null)
+        {
+            Error = err;
+            return;
+        }
+
+        await LoadAsync();
+    }
+
+    private async Task OnUnlikeAsync(int songId)
+    {
+        Error = null;
+        var (score, err) = await Api.UnlikeSongAsync(songId);
+        if (err is not null)
+        {
+            Error = err;
+            return;
+        }
+
+        await LoadAsync();
+    }
+
+    // row click – youtube + overlay
+    private async Task OnSongRowClickAsync(SongWithLikesDto s)
+    {
+        // overlay-ը թռցնենք առանձին task-ով, որ UI-ն չսառի
+        _ = ShowNowPlayingOverlayAsync(s.Title, s.ArtistName);
+
+        await OpenYoutubeAsync(s.Title, s.ArtistName);
+    }
+
+    private async Task OpenYoutubeAsync(string title, string artist)
+    {
+        string url;
+
+        // special case – After Midnight → ABBA track
+        if (title == "After Midnight")
+        {
+            url = "https://www.youtube.com/watch?v=XEjLoHdbVeE&list=RDXEjLoHdbVeE&index=1";
+        }
+        else
+        {
+            var query = Uri.EscapeDataString($"{title} {artist} song");
+            url = $"https://www.youtube.com/results?search_query={query}";
+        }
+
+        await JS.InvokeVoidAsync("open", url, "_blank");
+    }
+
+    private async Task ShowNowPlayingOverlayAsync(string title, string artist)
+    {
+        _nowPlayingTitle = $"{title} — {artist}";
+        _showNowPlaying = true;
+        StateHasChanged();
+
+        // 4 վայրկյան մնա էկրանին
+        await Task.Delay(30000);
+
+        _showNowPlaying = false;
+        StateHasChanged();
+    }
+}

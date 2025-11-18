@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace User.Shared.DTO
 {
-    public sealed record ExternalPlaylistDetailsDto(
-         int Id,
-         string Name,
-         string? Description,
-         bool IsPublic,
-         IReadOnlyList<ExternalPlaylistSongRefDto> Songs
-     );
+    public record ExternalPlaylistDetailsDto(
+    int Id,
+    string Name,
+    string? Description,
+    string? Genre,
+    IReadOnlyList<ExternalPlaylistSongItemDto> Songs);
+
 }

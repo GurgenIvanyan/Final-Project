@@ -1,0 +1,237 @@
+﻿@page "/playlists/external/{Id:int}"
+@using System
+@using User.BlazorClient.Services
+@inject UserApiClient Api
+@inject AuthState Auth
+@inject NavigationManager Nav
+
+<div class="pulsewave-page external-details-page container py-5">
+
+    <button class="btn btn-link external-back-link" @onclick="GoBack">
+        <span class="oi oi-chevron-left me-1" aria-hidden="true"></span>
+        Back to curated playlists
+    </button>
+
+    @if (!string.IsNullOrEmpty(Error))
+    {
+        <div class="alert alert-danger mt-3">@Error</div>
+    }
+    else if (_loading)
+    {
+        <div class="external-loading mt-4">
+            <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+            <span>Loading playlist…</span>
+        </div>
+    }
+    else if (_playlist is null)
+    {
+        <div class="alert alert-dark border-0 text-muted mt-4">
+            Playlist not found.
+        </div>
+    }
+    else
+    {
+        <div class="row gy-4 align-items-start mt-2">
+            <!-- LEFT: HERO CARD -->
+            <div class="col-lg-5">
+                <div class="glass-card external-hero-card">
+                    <div class="external-session-label text-uppercase">
+                        POP PULSEWAVE SESSION
+                    </div>
+
+                    <h1 class="external-title">@_playlist.Name</h1>
+
+                    <p class="external-subtitle">
+                        @(_playlist.Genre ?? "Mixed") · @_playlist.Songs.Count @(_playlist.Songs.Count == 1 ? "song" : "songs")
+                    </p>
+
+                    @if (!string.IsNullOrWhiteSpace(_playlist.Description))
+                    {
+                        <p class="external-description">
+                            @_playlist.Description
+                        </p>
+                    }
+                    else
+                    {
+                        <p class="external-description text-muted">
+                            Hand-crafted playlist for experiments, coding sessions and microservice demos.
+                        </p>
+                    }
+
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <span class="external-pill pill-genre">
+                            @(_playlist.Genre ?? "Mixed")
+                        </span>
+                        <span class="external-pill pill-count">
+                            @_playlist.Songs.Count @(_playlist.Songs.Count == 1 ? "track" : "tracks")
+                        </span>
+                        <span class="external-pill pill-type">
+                            External playlist
+                        </span>
+                    </div>
+
+                    <div class="external-cta">
+                        @if (Auth.IsAuthenticated)
+                        {
+                            <button class="btn glow-button external-import-btn"
+                                    disabled="@_busy"
+                                    @onclick="ImportCurrentAsync">
+                                <span class="oi oi-headphones me-2" aria-hidden="true"></span>
+                                @(_busy ? "Importing…" : "Import to My Playlists")
+                            </button>
+
+                            <div class="small text-muted mt-2">
+                                After import, this playlist will appear under
+                                <strong>“My Playlists”</strong>.
+                            </div>
+                        }
+                        else
+                        {
+                            <!-- ամբողջ row-ն clickable login callout -->
+                            <div class="external-login-row" @onclick="GoLogin">
+                                <span class="oi oi-account-login external-login-icon"
+                                      aria-hidden="true"></span>
+
+                                <div class="external-login-text">
+                                    <div class="external-login-main">
+                                        Log in to import this playlist into your account.
+                                    </div>
+                                    <div class="external-login-sub">
+                                        You’ll be redirected to the login page.
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: SONGS TABLE -->
+            <div class="col-lg-7">
+                @if (_playlist.Songs is null || _playlist.Songs.Count == 0)
+                {
+                    <div class="alert alert-dark border-0 text-muted mt-2">
+                        No songs in this playlist yet.
+                    </div>
+                }
+                else
+                {
+                    <div class="glass-card external-songs-card">
+                        <div class="external-songs-header">
+                            Songs in this playlist
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-dark table-hover mb-0 align-middle external-songs-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width:60px;">#</th>
+                                        <th>Title</th>
+                                        <th>Artist</th>
+                                        <th>Genre</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var (song, index) in _playlist.Songs.Select((s, i) => (s, i + 1)))
+                                    {
+                                        <tr>
+                                            <td>@index</td>
+                                            <td>
+                                                <a class="song-link"
+                                                   href="@GetYoutubeSearchUrl(song.Title, song.ArtistName)"
+                                                   target="_blank"
+                                                   rel="noopener noreferrer"
+                                                   title="Open on YouTube">
+                                                    @song.Title
+                                                </a>
+                                            </td>
+                                            <td>@song.ArtistName</td>
+                                            <td>@song.Genre</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+        @if (!string.IsNullOrEmpty(_successMessage))
+        {
+            <div class="alert alert-success mt-4 external-success">
+                @_successMessage
+                <button class="btn btn-sm btn-link ps-2"
+                        @onclick="@(() => Nav.NavigateTo("/my-playlists"))">
+                    Open My Playlists →
+                </button>
+            </div>
+        }
+    }
+</div>
+
+@code {
+    [Parameter] public int Id { get; set; }
+
+    private bool _loading;
+    private bool _busy;
+    private string? Error;
+    private string? _successMessage;
+    private ExternalPlaylistDetailsDto? _playlist;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadAsync();
+    }
+
+    private async Task LoadAsync()
+    {
+        _loading = true;
+        Error = null;
+        StateHasChanged();
+
+        var (pl, err) = await Api.GetExternalPlaylistDetailsAsync(Id);
+        Error = err;
+        _playlist = pl;
+
+        _loading = false;
+        StateHasChanged();
+    }
+
+    private async Task ImportCurrentAsync()
+    {
+        if (_playlist is null) return;
+
+        _busy = true;
+        Error = null;
+        _successMessage = null;
+        StateHasChanged();
+
+        var (pl, err) = await Api.ImportPlaylistAsync(_playlist.Id);
+        _busy = false;
+
+        if (err is not null)
+            Error = err;
+        else if (pl is not null)
+            _successMessage = $"Playlist \"{pl.Name}\" was imported to your account.";
+
+        StateHasChanged();
+    }
+
+    private void GoBack() => Nav.NavigateTo("/playlists");
+
+    private void GoLogin()
+    {
+        // եթե login route-ը այլ է, փոխի այստեղ
+        Nav.NavigateTo("/login");
+    }
+
+    private string GetYoutubeSearchUrl(string title, string? artist)
+    {
+        var query = string.IsNullOrWhiteSpace(artist)
+            ? title
+            : $"{title} {artist}";
+
+        return $"https://www.youtube.com/results?search_query={Uri.EscapeDataString(query)}";
+    }
+}

@@ -1,0 +1,63 @@
+﻿@page "/login"
+@inject User.BlazorClient.Services.UserApiClient Api
+@inject User.BlazorClient.Services.AuthState Auth
+@inject NavigationManager Nav
+
+<div class="auth-page">
+    <h1>Login</h1>
+
+    @if (!string.IsNullOrEmpty(Error))
+    {
+        <div class="alert alert-danger">@Error</div>
+    }
+
+    @if (Auth.IsAuthenticated)
+    {
+        <div class="alert alert-success">
+            You are logged in as <strong>@Auth.UserName</strong>.
+            <button class="btn btn-link" @onclick="OnLogout">Logout</button>
+        </div>
+    }
+
+    <div class="card p-3 auth-card">
+        <div class="mb-3">
+            <label class="form-label">User name</label>
+            <input class="form-control" @bind="UserName" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input class="form-control" @bind="Password" type="password" />
+        </div>
+        <button class="btn btn-primary w-100" @onclick="OnLogin">Login</button>
+    </div>
+
+    <div class="mt-2 auth-bottom">
+        <span>Don't have an account?</span>
+        <a href="/register" class="btn btn-link">Sign up</a>
+    </div>
+</div>
+
+@code {
+    private string UserName { get; set; } = "";
+    private string Password { get; set; } = "";
+    private string? Error;
+
+    private async Task OnLogin()
+    {
+        Error = null;
+        var (ok, err) = await Api.LoginAsync(UserName, Password);
+        if (!ok)
+        {
+            Error = err ?? "Login failed.";
+            return;
+        }
+
+        Nav.NavigateTo("/");
+    }
+
+    private void OnLogout()
+    {
+        Api.Logout();
+        Nav.NavigateTo("/");
+    }
+}

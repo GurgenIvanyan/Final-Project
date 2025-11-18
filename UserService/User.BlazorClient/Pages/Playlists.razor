@@ -1,0 +1,169 @@
+﻿@page "/playlists"
+@using User.BlazorClient.Services
+@inject UserApiClient Api
+@inject AuthState Auth
+@inject NavigationManager Nav
+
+<div class="playlist-list-page">
+    <div class="mypl-header">
+        <div>
+            <h1 class="mypl-title">Playlists</h1>
+            <p class="mypl-subtitle">
+                Browse ready-made PulseWave playlists and add them to <strong>My Playlists</strong>.
+            </p>
+        </div>
+
+        <button class="mypl-btn-new" @onclick="ReloadAsync">
+            <span class="mypl-btn-plus">↻</span>
+            Reload
+        </button>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Error))
+    {
+        <div class="alert alert-danger">@Error</div>
+    }
+    else if (_loading)
+    {
+        <p>Loading playlists...</p>
+    }
+    else if (_items is null || _items.Count == 0)
+    {
+        <p>No playlists found.</p>
+    }
+    else
+    {
+        <div class="mypl-grid">
+            @foreach (var pl in _items)
+            {
+                <div class="mypl-glass-card mypl-card"
+                     @onclick="@(() => OpenDetails(pl.Id))"
+                     style="cursor:pointer;">
+                    <div class="mypl-card-main">
+                        <div class="mypl-card-thumb">
+                            <div class="mypl-card-thumb-inner">
+                                🎵
+                            </div>
+                        </div>
+
+                        <div class="mypl-card-body">
+                            <h2 class="mypl-card-name">@pl.Name</h2>
+
+                            @if (!string.IsNullOrWhiteSpace(pl.Description))
+                            {
+                                <div class="mypl-card-text">@pl.Description</div>
+                            }
+
+                            <div class="mypl-card-meta">
+                                <span class="mypl-chip">
+                                    Genre: @(string.IsNullOrWhiteSpace(pl.Genre) ? "Mixed" : pl.Genre)
+                                </span>
+                                <span class="mypl-chip">
+                                    @pl.SongsCount song(s)
+                                </span>
+                            </div>
+
+                            <div class="mypl-card-footer">
+                                <span>External playlist</span>
+
+                                @if (Auth.IsAuthenticated)
+                                {
+                                    <button class="mypl-btn-primary"
+                                            disabled="@(_importingId == pl.Id)"
+                                            @onclick="@(e => ImportAsync(pl.Id))"
+                                            @onclick:stopPropagation="true">
+                                        @if (_importingId == pl.Id)
+                                        {
+                                            <span>Importing...</span>
+                                        }
+                                        else
+                                        {
+                                            <span>+ Add to My Playlists</span>
+                                        }
+                                    </button>
+                                }
+                                else
+                                {
+                                    <span class="text-muted small">
+                                        Log in to import
+                                    </span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(Success))
+    {
+        <div class="alert alert-success mt-3">@Success</div>
+    }
+</div>
+
+@code {
+    private bool _loading;
+    private string? Error;
+    private string? Success;
+    private int? _importingId;
+    private IReadOnlyList<ExternalPlaylistListItemDto>? _items;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ReloadAsync();
+    }
+
+    private async Task ReloadAsync()
+    {
+        Error = null;
+        Success = null;
+        _loading = true;
+        StateHasChanged();
+
+        var (page, err) = await Api.GetExternalPlaylistsAsync(
+            genre: null,
+            page: 1,
+            pageSize: 20);
+
+        Error = err;
+        _items = page?.Items ?? Array.Empty<ExternalPlaylistListItemDto>();
+
+        _loading = false;
+        StateHasChanged();
+    }
+
+    private void OpenDetails(int playlistId)
+    {
+        Nav.NavigateTo($"/playlists/external/{playlistId}");
+    }
+
+    private async Task ImportAsync(int sourcePlaylistId)
+    {
+        Error = null;
+        Success = null;
+        _importingId = sourcePlaylistId;
+        StateHasChanged();
+
+        var (playlist, err) = await Api.ImportPlaylistAsync(sourcePlaylistId);
+
+        _importingId = null;
+
+        if (err is not null)
+        {
+            Error = err;
+            StateHasChanged();
+            return;
+        }
+
+        if (playlist is null)
+        {
+            Error = "Empty response from import.";
+            StateHasChanged();
+            return;
+        }
+
+        Success = $"Playlist \"{playlist.Name}\" successfully added to My Playlists.";
+        StateHasChanged();
+    }
+}

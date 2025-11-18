@@ -21,5 +21,7 @@ namespace User.Core.Interfaces.Repositories
         int requesterUserId, int page, int pageSize, CancellationToken ct = default);
         Task<(IReadOnlyList<UserPlaylist> items, int total)> GetPublicByOthersFullPagedAsync(
         int requesterUserId, int page, int pageSize, CancellationToken ct = default);
+        Task RemoveAllSongsAsync(int playlistId, CancellationToken ct = default);
+
     }
 }

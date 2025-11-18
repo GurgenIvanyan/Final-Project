@@ -1,0 +1,347 @@
+﻿@page "/my-playlists/{Id:int}"
+@using User.BlazorClient.Services
+@inject UserApiClient Api
+@inject AuthState Auth
+@inject NavigationManager Nav
+
+<div class="playlist-details-page container mt-3">
+    <div class="d-flex align-items-center mb-3">
+        <button class="btn btn-link p-0 me-2" @onclick="GoBack">
+            ← Back
+        </button>
+        <h2 class="mb-0">My playlist details</h2>
+    </div>
+
+    @if (!Auth.IsAuthenticated)
+    {
+        <div class="alert alert-warning">
+            You need to <a href="login" @onclick="@(e => Nav.NavigateTo("login"))">log in</a> first.
+        </div>
+    }
+    else if (!string.IsNullOrEmpty(Error))
+    {
+        <div class="alert alert-danger">@Error</div>
+    }
+    else if (_loading)
+    {
+        <div class="d-flex align-items-center">
+            <div class="spinner-border me-2" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <span>Loading playlist...</span>
+        </div>
+    }
+    else if (_playlist is null)
+    {
+        <div class="alert alert-info">
+            Playlist not found.
+        </div>
+    }
+    else
+    {
+        <!-- Playlist header card -->
+        <div class="card mb-4 shadow-sm playlist-header-card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <h3 class="card-title mb-1">@_playlist.Name</h3>
+
+                        @if (!string.IsNullOrWhiteSpace(_playlist.Description))
+                        {
+                            <p class="card-text text-muted mb-2">@_playlist.Description</p>
+                        }
+
+                        <div class="mb-2">
+                            <span class="badge @( _playlist.IsPublic ? "bg-success" : "bg-secondary")">
+                                @(_playlist.IsPublic ? "Public" : "Private")
+                            </span>
+
+                            @if (_playlist.SourcePlaylistId is not null)
+                            {
+                                <span class="badge bg-info ms-2">
+                                    Imported from external playlist #@_playlist.SourcePlaylistId
+                                </span>
+                            }
+                        </div>
+
+                        <small class="text-muted">
+                            @(_playlist.Songs?.Count ?? 0) song(s)
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Existing songs table -->
+        @if (_playlist.Songs is null || _playlist.Songs.Count == 0)
+        {
+            <div class="alert alert-light border">
+                No songs in this playlist yet.
+            </div>
+        }
+        else
+        {
+            <div class="card shadow-sm mb-4 playlist-section-card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Songs</span>
+                    <small class="text-muted">You can reorder or remove songs</small>
+                </div>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th style="width:80px;">#</th>
+                                <th>Title</th>
+                                <th style="width:180px;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var s in _playlist.Songs.OrderBy(x => x.Order))
+                            {
+                                var isFirst = s.Order <= 1;
+                                var isLast = s.Order >= MaxOrder;
+                                <tr>
+                                    <td>@s.Order</td>
+                                    <td>
+                                        <!-- Title, но кликабельный (открывает YouTube) -->
+                                        <a href="@GetYoutubeUrl(s.Title)"
+                                           target="_blank"
+                                           rel="noopener noreferrer"
+                                           style="color: inherit; text-decoration: none;">
+                                            @s.Title
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-secondary me-1"
+                                                disabled="@(_busy || isFirst)"
+                                                @onclick="() => MoveUpAsync(s)">
+                                            ↑
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-secondary me-1"
+                                                disabled="@(_busy || isLast)"
+                                                @onclick="() => MoveDownAsync(s)">
+                                            ↓
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger"
+                                                disabled="@_busy"
+                                                @onclick="() => RemoveAsync(s)">
+                                            ✕ Remove
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+
+        <!-- Add songs section -->
+        <hr class="my-4" />
+
+        <h4>Add songs to this playlist</h4>
+
+        <div class="card mb-3 add-songs-card">
+            <div class="card-body">
+                <div class="row g-2 align-items-end">
+                    <div class="col-md-6">
+                        <label class="form-label">Title contains</label>
+                        <input class="form-control" @bind="SearchTitle" />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Genre (optional)</label>
+                        <input class="form-control" @bind="SearchGenre" />
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary w-100"
+                                @onclick="SearchAsync"
+                                disabled="@_searchLoading">
+                            @(_searchLoading ? "Searching..." : "Search songs")
+                        </button>
+                    </div>
+                </div>
+
+                @if (!string.IsNullOrEmpty(SearchError))
+                {
+                    <div class="alert alert-danger mt-3">@SearchError</div>
+                }
+            </div>
+        </div>
+
+        @if (_searchResults is not null && _searchResults.Count > 0)
+        {
+            <div class="card shadow-sm search-card">
+                <div class="card-header">
+                    Search results
+                </div>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Artist</th>
+                                <th>Genre</th>
+                                <th style="width:140px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var s in _searchResults)
+                            {
+                                <tr>
+                                    <td>
+                                        <a href="@GetYoutubeUrl(s.Title, s.ArtistName)"
+                                           target="_blank"
+                                           rel="noopener noreferrer"
+                                           style="color: inherit; text-decoration: none;">
+                                            @s.Title
+                                        </a>
+                                    </td>
+                                    <td>@s.ArtistName</td>
+                                    <td>@s.Genre</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-success"
+                                                disabled="@_busy"
+                                                @onclick="() => AddSongAsync(s.Id)">
+                                            + Add to playlist
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private bool _loading;
+    private bool _busy;           // mutation in progress (move/remove/add)
+    private string? Error;
+    private UserPlaylistDetailsDto? _playlist;
+
+    private int MaxOrder => _playlist?.Songs?.Count ?? 0;
+
+    // --- Search state ---
+    private string SearchTitle { get; set; } = "";
+    private string? SearchGenre { get; set; }
+    private bool _searchLoading;
+    private string? SearchError;
+    private IReadOnlyList<ExternalSongDto>? _searchResults;
+
+    // Специальные прямые ссылки (там, где ты хочешь именно official video)
+    private static readonly Dictionary<string, string> YoutubeDirect = new(StringComparer.OrdinalIgnoreCase)
+    {
+        // Пример: твой кейс с ABBA
+        { "After Midnight", "https://www.youtube.com/watch?v=XEjLoHdbVeE&list=RDXEjLoHdbVeE&index=1" }
+        // сюда можешь сам дописать остальные, если захочешь прямые official-линки
+    };
+
+    private string GetYoutubeUrl(string title, string? artist = null)
+    {
+        // Если есть прямой линк — используем его
+        if (YoutubeDirect.TryGetValue(title, out var direct))
+            return direct;
+
+        // Иначе просто открываем YouTube search по названию (и артисту, если есть)
+        var query = string.IsNullOrWhiteSpace(artist)
+            ? title
+            : $"{title} {artist}";
+
+        return "https://www.youtube.com/results?search_query=" +
+               Uri.EscapeDataString(query);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!Auth.IsAuthenticated)
+            return;
+
+        await LoadAsync();
+    }
+
+    private async Task LoadAsync()
+    {
+        Error = null;
+        _loading = true;
+        StateHasChanged();
+
+        var (pl, err) = await Api.GetMyPlaylistDetailsAsync(Id);
+        _playlist = pl;
+        Error = err;
+
+        _loading = false;
+        StateHasChanged();
+    }
+
+    private void GoBack()
+    {
+        Nav.NavigateTo("/my-playlists");
+    }
+
+    // ---- helpers for mutations ----
+    private async Task RunMutationAsync(Func<Task<string?>> action)
+    {
+        Error = null;
+        _busy = true;
+        StateHasChanged();
+
+        var err = await action();
+        if (!string.IsNullOrEmpty(err))
+        {
+            Error = err;
+        }
+
+        // always reload from server to have fresh order
+        await LoadAsync();
+
+        _busy = false;
+        StateHasChanged();
+    }
+
+    private Task MoveUpAsync(UserPlaylistSongItemDto s)
+    {
+        if (s.Order <= 1) return Task.CompletedTask;
+        return RunMutationAsync(() =>
+            Api.MoveSongInMyPlaylistAsync(Id, s.SongId, s.Order - 1));
+    }
+
+    private Task MoveDownAsync(UserPlaylistSongItemDto s)
+    {
+        if (s.Order >= MaxOrder) return Task.CompletedTask;
+        return RunMutationAsync(() =>
+            Api.MoveSongInMyPlaylistAsync(Id, s.SongId, s.Order + 1));
+    }
+
+    private Task RemoveAsync(UserPlaylistSongItemDto s)
+    {
+        return RunMutationAsync(() =>
+            Api.RemoveSongFromMyPlaylistAsync(Id, s.SongId));
+    }
+
+    // ---- Search + Add song ----
+    private async Task SearchAsync()
+    {
+        SearchError = null;
+        _searchResults = null;
+        _searchLoading = true;
+        StateHasChanged();
+
+        var (page, err) = await Api.SearchSongsAsync(SearchTitle, SearchGenre, 1, 20);
+        SearchError = err;
+        _searchResults = page.Items;
+
+        _searchLoading = false;
+        StateHasChanged();
+    }
+
+    private Task AddSongAsync(int songId)
+    {
+        return RunMutationAsync(() =>
+            Api.AddSongToMyPlaylistAsync(Id, songId));
+    }
+}

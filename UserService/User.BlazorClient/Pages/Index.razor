@@ -1,0 +1,142 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Routing
+
+<div class="pw-hero-wrapper">
+    <div class="pw-bg-gradient"></div>
+    <div class="pw-bg-blob blob-1"></div>
+    <div class="pw-bg-blob blob-2"></div>
+    <div class="pw-bg-blob blob-3"></div>
+
+    <!-- NAVBAR -->
+    <header class="pw-navbar">
+        <div class="pw-logo">
+            <div class="pw-logo-icon">
+                <span class="wave-bar wave-1"></span>
+                <span class="wave-bar wave-2"></span>
+                <span class="wave-bar wave-3"></span>
+            </div>
+            <span class="pw-logo-text">PulseWave</span>
+        </div>
+
+        <nav class="pw-nav-links">
+            <a href="#" class="pw-nav-link active">Discover</a>
+            <a href="#" class="pw-nav-link">Playlists</a>
+            <a href="#" class="pw-nav-link">For You</a>
+            <a href="#" class="pw-nav-link">Premium</a>
+        </nav>
+
+        <div class="pw-auth">
+            <!-- Log in → /login -->
+            <NavLink class="pw-btn pw-btn-text" href="login" Match="NavLinkMatch.All">
+                Log in
+            </NavLink>
+
+            <!-- Գեղեցիկ glass Sign up → /register -->
+            <NavLink class="pw-btn pw-btn-ghost" href="register">
+                Sign up
+            </NavLink>
+
+            <!-- Get Started → օրինակ MyPlaylists -->
+            <NavLink class="pw-btn pw-btn-primary" href="myplaylists">
+                Get Started
+            </NavLink>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main class="pw-hero">
+        <!-- LEFT SIDE -->
+        <section class="pw-hero-left">
+            <div class="pw-badge">
+                <span class="badge-dot"></span>
+                Music Platform
+            </div>
+
+            <h1 class="pw-hero-title">
+                Feel the <span class="neon-word">Beat</span>,<br />
+                Not Just the Code.
+            </h1>
+
+            <p class="pw-hero-tagline">
+                A site that helps you dive into your own world.
+            </p>
+        </section>
+
+        <!-- RIGHT SIDE -->
+        <section class="pw-hero-right">
+            <div class="pw-player-stack">
+                <div class="pw-player-card shadow-card shadow-card-1"></div>
+                <div class="pw-player-card shadow-card shadow-card-2"></div>
+
+                <div class="pw-player-card main-card">
+                    <div class="card-header">
+                        <span class="pill pill-now">Now Playing</span>
+                        <span class="pill pill-live">LIVE MIX</span>
+                    </div>
+
+                    <div class="card-main">
+                        <div class="album-cover">
+                            <div class="album-inner"></div>
+                        </div>
+                        <div class="track-info">
+                            <h3 class="track-title">Neon Skyline (Microservice Remix)</h3>
+                            <p class="track-artist">Gurgen · PulseWave Sessions</p>
+
+                            <div class="track-meta">
+                                <span>128 BPM</span>
+                                <span>+</span>
+                                <span>Lo-Fi • Chill • Code</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+
+                            <div class="progress-time">
+                                <span>1:24</span>
+                                <span>3:47</span>
+                            </div>
+
+                            <div class="controls-row">
+                                <button class="ctrl-btn small">⏮</button>
+                                <button class="ctrl-btn play">▶</button>
+                                <button class="ctrl-btn small">⏭</button>
+                                <button class="ctrl-btn small">❤</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="equalizer">
+                            <span class="eq-bar eq-1"></span>
+                            <span class="eq-bar eq-2"></span>
+                            <span class="eq-bar eq-3"></span>
+                            <span class="eq-bar eq-4"></span>
+                            <span class="eq-bar eq-5"></span>
+                        </div>
+                        <div class="footer-tags">
+                            <span class="tag">Top Liked</span>
+                            <span class="tag">For You</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FEATURES ROW -->
+    <section class="pw-features">
+        <div class="feature-card">
+            <h3>Real Microservices</h3>
+            <p>Separate playlist, recommendation and logging services communicating over HTTP and message queues.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Smart Caching</h3>
+            <p>Redis-powered caching for hot playlists, trending tracks and user preferences.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Dev-First Experience</h3>
+            <p>Perfect for demos, portfolios and API experiments while listening to your own curated tracks.</p>
+        </div>
+    </section>
+</div>

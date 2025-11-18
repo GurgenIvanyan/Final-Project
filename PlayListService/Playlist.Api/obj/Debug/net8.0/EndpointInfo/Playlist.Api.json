@@ -1722,7 +1722,7 @@
           "songs": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/SongDto"
+              "$ref": "#/components/schemas/PlaylistSongRefDto"
             },
             "nullable": true
           }
@@ -1816,6 +1816,20 @@
             "format": "int32"
           },
           "newOrder": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PlaylistSongRefDto": {
+        "type": "object",
+        "properties": {
+          "songId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "order": {
             "type": "integer",
             "format": "int32"
           }

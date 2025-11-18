@@ -1,0 +1,79 @@
+﻿@page "/register"
+@inject User.BlazorClient.Services.UserApiClient Api
+@inject NavigationManager Nav
+
+<div class="auth-page">
+    <h1>Sign up</h1>
+
+    @if (!string.IsNullOrEmpty(Error))
+    {
+        <div class="alert alert-danger">@Error</div>
+    }
+
+    @if (!string.IsNullOrEmpty(Success))
+    {
+        <div class="alert alert-success">@Success</div>
+    }
+
+    <div class="card p-3 auth-card">
+        <div class="mb-3">
+            <label class="form-label">User name</label>
+            <input class="form-control" @bind="UserName" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input class="form-control" @bind="Password" type="password" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Confirm password</label>
+            <input class="form-control" @bind="ConfirmPassword" type="password" />
+        </div>
+
+        <button class="btn btn-primary w-100" @onclick="OnRegister">Create account</button>
+    </div>
+
+    <div class="mt-2 auth-bottom">
+        <span>Already have an account?</span>
+        <a href="/login" class="btn btn-link">Log in</a>
+    </div>
+</div>
+
+@code {
+    private string UserName { get; set; } = "";
+    private string Password { get; set; } = "";
+    private string ConfirmPassword { get; set; } = "";
+    private string? Error;
+    private string? Success;
+
+    private async Task OnRegister()
+    {
+        Error = null;
+        Success = null;
+
+        if (string.IsNullOrWhiteSpace(UserName) ||
+            string.IsNullOrWhiteSpace(Password) ||
+            string.IsNullOrWhiteSpace(ConfirmPassword))
+        {
+            Error = "All fields are required.";
+            return;
+        }
+
+        if (Password != ConfirmPassword)
+        {
+            Error = "Passwords do not match.";
+            return;
+        }
+
+        var (ok, err) = await Api.RegisterAsync(UserName, Password);
+        if (!ok)
+        {
+            Error = err ?? "Registration failed.";
+            return;
+        }
+
+        Success = "Account created successfully. Redirecting to login...";
+        Nav.NavigateTo("/login");
+    }
+}

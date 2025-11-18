@@ -32,7 +32,6 @@ namespace Playlist.Api.Application.Services
         {
             _playlists = playlists;
             _songs = songs;
-            //_votes = votes;
             _uow = uow;
             _map = map;
             _cache = cache;
@@ -218,19 +217,21 @@ namespace Playlist.Api.Application.Services
             await _cache.RemoveAsync(SongKey(songId), ct); 
         }
 
-      
+
 
         // ----------------- mapping -----------------
+        // PlaylistService
+
         private static PlaylistDetailsDto ToDetails(PlaylistEntity entity)
         {
             var songs = entity.PlaylistSongs
                 .OrderBy(ps => ps.Order)
-                .Select(ps => new SongDto(
-                    ps.Song.Id,
-                    ps.Song.Title,
-                    ps.Song.Genre,
-                    ps.Song.ArtistId,
-                    ps.Song.Artist.Name))
+                .Select(ps => new PlaylistSongItemDto(
+                    SongId: ps.SongId,
+                    Title: ps.Song.Title,
+                    ArtistName: ps.Song.Artist.Name,
+                    Genre: ps.Song.Genre,
+                    Order: ps.Order))
                 .ToList();
 
             return new PlaylistDetailsDto(
@@ -240,6 +241,7 @@ namespace Playlist.Api.Application.Services
                 entity.Genre,
                 songs);
         }
+
 
     }
 }

@@ -27,6 +27,9 @@ namespace User.Application.Services.IServices
         Task<PagedResult<PublicPlaylistWithSongsDto>> GetPublicByOthersWithSongsAsync(int requesterUserId, int page, int pageSize, CancellationToken ct = default);
         Task<PagedResult<PublicPlaylistWithSongsRichDto>> GetPublicByOthersWithSongsRichAsync(
            int requesterUserId, int page, int pageSize, CancellationToken ct = default);
+        Task DeleteAsync(int ownerUserId, int playlistId, CancellationToken ct = default);
+        Task NormalizeOrdersAsync(int playlistId, CancellationToken ct);
+
     }
 
 }

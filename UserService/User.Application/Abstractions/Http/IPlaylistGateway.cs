@@ -20,6 +20,7 @@ namespace User.Application.Abstractions.Http
         Task<Dictionary<int, string>> GetSongTitlesByIdsAsync(IEnumerable<int> ids, CancellationToken ct = default);
         Task<PagedResult<ExternalPlaylistListItemDto>> GetExternalPlaylistsAsync(
        string? genre, int page, int pageSize, CancellationToken ct = default);
+
         Task<Dictionary<int, ExternalSongMetaDto>> GetSongMetadataByIdsAsync(IEnumerable<int> ids, CancellationToken ct = default);
     }
 }

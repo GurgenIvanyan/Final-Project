@@ -1,0 +1,132 @@
+﻿@page "/public-playlists"
+@using User.BlazorClient.Services
+@inject UserApiClient Api
+
+<div class="public-playlists-page">
+    <header class="mb-3">
+        <h1 class="public-playlists-title">Public playlists</h1>
+        <p class="public-playlists-subtitle">
+            Explore mixes shared by the PulseWave community.
+        </p>
+    </header>
+
+    @if (!string.IsNullOrEmpty(Error))
+    {
+        <div class="alert alert-danger mt-2">@Error</div>
+    }
+    else if (_loading)
+    {
+        <p>Loading...</p>
+    }
+    else if (_items is null || _items.Count == 0)
+    {
+        <p>No public playlists yet.</p>
+    }
+    else
+    {
+        <div class="public-playlists-grid">
+            @foreach (var p in _items)
+            {
+                <section class="public-playlist-card">
+                    <!-- HEADER картинка + инфо -->
+                    <header class="public-playlist-header">
+                        <div class="public-playlist-thumb">
+                            <div class="public-playlist-thumb-inner">
+                                🎧
+                            </div>
+                        </div>
+
+                        <div class="public-playlist-header-main">
+                            <h2 class="public-playlist-name">@p.Name</h2>
+
+                            @if (!string.IsNullOrWhiteSpace(p.Description))
+                            {
+                                <p class="public-playlist-desc">@p.Description</p>
+                            }
+
+                            <div class="public-playlist-meta">
+                                <span class="public-playlist-chip">
+                                    Owner: @p.OwnerUserName
+                                </span>
+                                <span class="public-playlist-chip">
+                                    @p.Songs.Count song(s)
+                                </span>
+                            </div>
+                        </div>
+                    </header>
+
+                    @if (p.Songs is not null && p.Songs.Count > 0)
+                    {
+                        <div class="public-playlist-table-wrapper">
+                            <table class="public-playlist-table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Title</th>
+                                        <th>Artist</th>
+                                        <th>Genre</th>
+                                        <th>Likes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for (int i = 0; i < p.Songs.Count; i++)
+                                    {
+                                        var s = p.Songs[i];
+
+                                        <tr>
+                                            <td>@(i + 1)</td>
+                                            <td>
+                                                <a href="@BuildYoutubeUrl(s.Title, s.ArtistName)"
+                                                   target="_blank"
+                                                   rel="noopener noreferrer">
+                                                    @s.Title
+                                                </a>
+                                            </td>
+                                            <td>@s.ArtistName</td>
+                                            <td>@s.Genre</td>
+                                            <td>@s.Likes</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                </section>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private bool _loading;
+    private string? Error;
+    private IReadOnlyList<PublicPlaylistWithSongsRichDto>? _items;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadAsync();
+    }
+
+    private async Task LoadAsync()
+    {
+        Error = null;
+        _loading = true;
+        StateHasChanged();
+
+        var (page, err) = await Api.GetPublicPlaylistsWithSongsRichAsync(page: 1, pageSize: 20);
+        Error = err;
+        _items = page?.Items ?? Array.Empty<PublicPlaylistWithSongsRichDto>();
+
+        _loading = false;
+        StateHasChanged();
+    }
+
+    private string BuildYoutubeUrl(string title, string? artist)
+    {
+        var query = string.IsNullOrWhiteSpace(artist)
+            ? title
+            : $"{artist} - {title}";
+
+        return $"https://www.youtube.com/results?search_query={Uri.EscapeDataString(query)}";
+    }
+}

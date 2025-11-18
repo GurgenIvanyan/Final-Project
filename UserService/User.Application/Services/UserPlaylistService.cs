@@ -45,9 +45,12 @@ namespace User.Application.Services
             return new UserPlaylistDto(entity.Id, entity.Name, entity.Description, entity.IsPublic, entity.SourcePlaylistId);
         }
 
-        public async Task<UserPlaylistDto> ImportAsync(int ownerUserId, ImportPlaylistDto dto, CancellationToken ct = default)
+
+        public async Task<UserPlaylistDto> ImportAsync(
+    int ownerUserId,
+    ImportPlaylistDto dto,
+    CancellationToken ct = default)
         {
-            
             var src = await _gateway.GetPlaylistAsync(dto.SourcePlaylistId, ct)
                       ?? throw new NotFoundException(AppErrors.PlaylistNotFound(dto.SourcePlaylistId));
 
@@ -57,22 +60,45 @@ namespace User.Application.Services
                 Name = src.Name,
                 Description = src.Description,
                 IsPublic = false,
-                SourcePlaylistId = src.Id
+                SourcePlaylistId = src.Id,
+                // կարևոր է, որ collection-ը ինիցիալիզացված լինի
+                Songs = new List<UserPlaylistSong>()
             };
 
             await _uow.ExecuteInTransactionAsync(async _ =>
             {
-                await _playlists.AddAsync(entity, ct);
+                // 👉 Կրկնվող երգերը հանենք SongId-ով
+                var distinctSongs = src.Songs
+                    .OrderBy(x => x.Order)
+                    .GroupBy(x => x.SongId)
+                    .Select(g => g.First());
 
                 int order = 0;
-                foreach (var s in src.Songs.OrderBy(x => x.Order))
+                foreach (var s in distinctSongs)
                 {
-                    await _playlists.AddSongAsync(entity.Id, s.SongId, ++order, ct);
+                    entity.Songs.Add(new UserPlaylistSong
+                    {
+                        SongId = s.SongId,
+                        Order = ++order
+                        // UserPlaylistId-ը EF-ն ինքը կդնի, որովհետև այս child-ը կապված է entity-ի հետ
+                    });
                 }
+
+                // Մի անգամ playlist-ը ավելացնում ենք context-ին
+                await _playlists.AddAsync(entity, ct);
+
+                // action-ում այլ SaveChanges չկա, _uow.SaveChangesAsync-ը կանչվելու է ExecuteInTransactionAsync-ի վերջում
             }, ct);
 
-            return new UserPlaylistDto(entity.Id, entity.Name, entity.Description, entity.IsPublic, entity.SourcePlaylistId);
+            return new UserPlaylistDto(
+                entity.Id,
+                entity.Name,
+                entity.Description,
+                entity.IsPublic,
+                entity.SourcePlaylistId
+            );
         }
+
 
         public async Task SetPublicAsync(int ownerUserId, int playlistId, bool isPublic, CancellationToken ct = default)
         {
@@ -138,9 +164,14 @@ namespace User.Application.Services
             }, ct);
         }
 
-        public async Task RemoveSongAsync(int ownerUserId, int playlistId, int songId, CancellationToken ct = default)
+        public async Task RemoveSongAsync(
+          int ownerUserId,
+          int playlistId,
+          int songId,
+          CancellationToken ct = default)
         {
-            var pl = await _playlists.GetByIdAsync(playlistId, ct)
+            // загружаем плейлист вместе с песнями
+            var pl = await _playlists.GetFullAsync(playlistId, ct)
                      ?? throw new NotFoundException(AppErrors.PlaylistNotFound(playlistId));
 
             if (pl.OwnerUserId != ownerUserId)
@@ -148,14 +179,34 @@ namespace User.Application.Services
 
             await _uow.ExecuteInTransactionAsync(async _ =>
             {
-                if (!await _playlists.ContainsSongAsync(pl.Id, songId, ct)) return;
+                // 1) убираем связь плейлист-песня
                 await _playlists.RemoveSongAsync(pl.Id, songId, ct);
+
+                // 2) снова читаем песни и нормализуем порядковые номера 1..N
+                var full = await _playlists.GetFullAsync(pl.Id, ct);
+                if (full?.Songs is null || full.Songs.Count == 0)
+                    return;
+
+                int order = 0;
+                foreach (var s in full.Songs.OrderBy(x => x.Order))
+                {
+                    s.Order = ++order;
+                }
+
+                await _playlists.UpdateAsync(full, ct);
             }, ct);
         }
 
-        public async Task ReorderAsync(int ownerUserId, int playlistId, int songId, int newOrder, CancellationToken ct = default)
+
+        public async Task ReorderAsync(
+     int ownerUserId,
+     int playlistId,
+     int songId,
+     int newOrder,
+     CancellationToken ct = default)
         {
-            var pl = await _playlists.GetByIdAsync(playlistId, ct)
+            // читаем плейлист вместе с песнями
+            var pl = await _playlists.GetFullAsync(playlistId, ct)
                      ?? throw new NotFoundException(AppErrors.PlaylistNotFound(playlistId));
 
             if (pl.OwnerUserId != ownerUserId)
@@ -164,17 +215,41 @@ namespace User.Application.Services
             if (newOrder < 1)
                 throw new InvalidOperationException(AppErrors.OrderOutOfRange());
 
+            // текущий список песен в порядке Order
+            var songs = pl.Songs
+                .OrderBy(x => x.Order)
+                .ToList();
+
+            var link = songs.FirstOrDefault(x => x.SongId == songId);
+            if (link is null)
+                return; // этой песни уже нет в плейлисте
+
+            // убираем трек из старой позиции
+            songs.Remove(link);
+
+            // clamp newOrder в [1; songs.Count + 1]
+            if (newOrder > songs.Count + 1)
+                newOrder = songs.Count + 1;
+
+            // вставляем на новое место (index = newOrder - 1)
+            songs.Insert(newOrder - 1, link);
+
             await _uow.ExecuteInTransactionAsync(async _ =>
             {
-                var max = await _playlists.GetMaxOrderAsync(pl.Id, ct);
-                if (max == 0) return;
+                // 1) очищаем все связи для этого плейлиста
+                await _playlists.RemoveAllSongsAsync(pl.Id, ct);
 
-                if (newOrder > max) newOrder = max;
-
-                await _playlists.ShiftOrdersDownAsync(pl.Id, newOrder, ct);
-                await _playlists.UpdateSongOrderAsync(pl.Id, songId, newOrder, ct);
+                // 2) заново добавляем песни с новыми порядками 1..N
+                int order = 0;
+                foreach (var s in songs)
+                {
+                    await _playlists.AddSongAsync(pl.Id, s.SongId, ++order, ct);
+                }
             }, ct);
         }
+
+
+
 
         public async Task<PagedResult<UserPlaylistDto>> GetMineAsync(int ownerUserId, int page, int pageSize, CancellationToken ct = default)
         {
@@ -207,9 +282,11 @@ namespace User.Application.Services
             var titles = await _gateway.GetSongTitlesByIdsAsync(ids, ct);
 
             var view = refs.Select(r => new UserPlaylistSongItemDto(
-                                    Title: titles.TryGetValue(r.SongId, out var t) ? t : $"Song #{r.SongId}",
-                                    Order: r.Order))
-                           .ToList();
+    SongId: r.SongId,
+    Title: titles.TryGetValue(r.SongId, out var t) ? t : $"Song #{r.SongId}",
+    Order: r.Order))
+   .ToList();
+
 
             return new UserPlaylistDetailsDto(
                 pl.Id, pl.Name, pl.Description, pl.IsPublic, pl.SourcePlaylistId, view
@@ -281,10 +358,12 @@ namespace User.Application.Services
             {
                 var refs = songRefsByPlaylist.TryGetValue(pl.Id, out var r) ? r : new List<UserPlaylistSongRefDto>();
                 var viewSongs = refs
-                    .Select(x => new UserPlaylistSongItemDto(
-                        Title: titles.TryGetValue(x.SongId, out var t) ? t : $"Song #{x.SongId}",
-                        Order: x.Order))
-                    .ToList();
+    .Select(x => new UserPlaylistSongItemDto(
+        SongId: x.SongId,
+        Title: titles.TryGetValue(x.SongId, out var t) ? t : $"Song #{x.SongId}",
+        Order: x.Order))
+    .ToList();
+
 
                 return new PublicPlaylistWithSongsDto(
                     Id: pl.Id,
@@ -382,6 +461,38 @@ namespace User.Application.Services
 
             return new PagedResult<PublicPlaylistWithSongsRichDto>(result, total, page, pageSize);
         }
+        public async Task DeleteAsync(int ownerUserId, int playlistId, CancellationToken ct = default)
+        {
+            var pl = await _playlists.GetByIdAsync(playlistId, ct)
+                     ?? throw new NotFoundException(AppErrors.PlaylistNotFound(playlistId));
+
+            if (pl.OwnerUserId != ownerUserId)
+                throw new ForbiddenException(AppErrors.ForbiddenAction());
+
+            await _uow.ExecuteInTransactionAsync(async _ =>
+            {
+                
+                await _playlists.DeleteAsync(pl, ct);
+            }, ct);
+        }
+        public async Task NormalizeOrdersAsync(int playlistId, CancellationToken ct)
+        {
+            var full = await _playlists.GetFullAsync(playlistId, ct);
+            if (full?.Songs is null || full.Songs.Count == 0)
+                return;
+
+            var ordered = full.Songs
+                .OrderBy(s => s.Order)
+                .ToList();
+
+            var order = 0;
+            foreach (var s in ordered)
+            {
+                order++;
+                await _playlists.UpdateSongOrderAsync(playlistId, s.SongId, order, ct);
+            }
+        }
+
 
     }
 }
